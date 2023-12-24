@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F0B4DC09-6D04-4C54-BFFD-170B1F3B60C8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBDCB1F3-B86F-4E8C-B265-76F04FA854BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessmentTests/DeviceAutomaticAsessmentTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "DeviceAutomaticAsessmentTests"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "EBDCB1F3-B86F-4E8C-B265-76F04FA854BD - 65831eed85f7e97d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DeviceAssessmentTests.DeviceAutomaticAsessmentTests.testCheckConnectivity() -&gt; ()"
+                  moduleName = "DeviceAssessmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessmentTests/DeviceAutomaticAsessmentTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "EBDCB1F3-B86F-4E8C-B265-76F04FA854BD - 65831eed85f7e97d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DeviceAssessmentTests.DeviceAutomaticAsessmentTests.testCheckConnectivity() -&gt; ()"
+                  moduleName = "DeviceAssessmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessmentTests/DeviceAutomaticAsessmentTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "331F25CC-7C90-44AE-A023-82CD14F8C28E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessmentTests/DeviceAutomaticAsessmentTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "testCheckSIMCard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
