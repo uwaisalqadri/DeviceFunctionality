@@ -8,6 +8,8 @@
 import XCTest
 import Foundation
 @testable import DeviceAssessment
+import CoreMotion
+import CoreTelephony
 
 /**
  * @class DeviceAutomaticAsessmentTests
@@ -16,7 +18,7 @@ import Foundation
  */
 final class DeviceAutomaticAsessmentTests: XCTestCase {
     
-  private var deviceTester: AssessmentTester!
+  private var assessmentTester: AssessmentTester!
   
   func testGetDeviceInformation() {
        
@@ -34,46 +36,96 @@ final class DeviceAutomaticAsessmentTests: XCTestCase {
   }
   
   func testGetDeviceStorage() {
-    deviceTester = AssessmentTester(driver: DeviceInfoAssessment(processInfo: ProcessInfo.processInfo, device: UIDevice.current))
-    debugPrint("This Device has GB of: \((deviceTester.driver.assessments[.storage] as? String).orDefault)")
-    XCTAssertTrue(deviceTester.driver.hasAssessmentPassed[.storage].orFalse)
+    assessmentTester = AssessmentTester(driver: DeviceInfoAssessment())
+    debugPrint("This Device has GB of: \((assessmentTester.driver.assessments[.storage] as? String).orDefault)")
+    XCTAssertTrue(assessmentTester.driver.hasAssessmentPassed[.storage].orFalse)
   }
   
   func testGetCPUInformation() {
-    deviceTester = AssessmentTester(driver: DeviceInfoAssessment(processInfo: ProcessInfo.processInfo, device: UIDevice.current))
-    debugPrint("This Device has CPU with following information: \((deviceTester.driver.assessments[.cpu] as? String).orDefault)")
-    XCTAssertTrue(deviceTester.driver.hasAssessmentPassed[.cpu].orFalse)
+    assessmentTester = AssessmentTester(driver: DeviceInfoAssessment())
+    debugPrint("This Device has CPU with following information: \((assessmentTester.driver.assessments[.cpu] as? String).orDefault)")
+    XCTAssertTrue(assessmentTester.driver.hasAssessmentPassed[.cpu].orFalse)
   }
   
   func testCheckBatteryStatus() {
-    deviceTester = AssessmentTester(driver: PowerAssessment(powerInfo: EEPowerInformation()))
-    debugPrint("This Device has Battery Status information: \((deviceTester.driver.assessments[.batteryStatus] as? String).orDefault)")
-    XCTAssertTrue(deviceTester.driver.hasAssessmentPassed[.batteryStatus].orFalse)
+    assessmentTester = AssessmentTester(driver: PowerAssessment())
+    debugPrint("This Device has Battery Status information: \((assessmentTester.driver.assessments[.batteryStatus] as? String).orDefault)")
+    XCTAssertTrue(assessmentTester.driver.hasAssessmentPassed[.batteryStatus].orFalse)
   }
   
   func testCheckDeviceIsNotJailBroken() {
-    deviceTester = AssessmentTester(driver: DeviceInfoAssessment(processInfo: ProcessInfo.processInfo, device: UIDevice.current))
-    XCTAssertTrue(deviceTester.driver.hasAssessmentPassed[.notJailbroken].orFalse)
+    assessmentTester = AssessmentTester(driver: DeviceInfoAssessment())
+    XCTAssertTrue(assessmentTester.driver.hasAssessmentPassed[.notJailbroken].orFalse)
   }
   
   func testCheckSIMCard() {
-    deviceTester = AssessmentTester(driver: ConnectivityAssessment(reachability: NetworkReachability()))
-    debugPrint("SIM \((deviceTester.driver.assessments[.sim] as? Bool).orFalse)")
-    XCTAssertTrue(deviceTester.driver.hasAssessmentPassed[.sim].orFalse)
+    assessmentTester = AssessmentTester(driver: ConnectivityAssessment())
+    debugPrint("SIM \((assessmentTester.driver.assessments[.sim] as? Bool).orFalse)")
+    XCTAssertTrue(assessmentTester.driver.hasAssessmentPassed[.sim].orFalse)
   }
   
   func testCheckConnectivity() {
     let exp = expectation(description: "wait for network status")
     
-    deviceTester = AssessmentTester(driver: ConnectivityAssessment(reachability: NetworkReachability()))
-    deviceTester.driver.startAssessment { [weak self] in
-      self?.debugPrint("WIFI \((self?.deviceTester.driver.assessments[.wifi] as? Bool).orFalse)")
+    assessmentTester = AssessmentTester(driver: ConnectivityAssessment())
+    assessmentTester.driver.startAssessment(for: .wifi) { [weak self] in
+      self?.debugPrint("WIFI \((self?.assessmentTester.driver.assessments[.wifi] as? Bool).orFalse)")
       exp.fulfill()
     }
     
     waitForExpectations(timeout: 2)
     
-    XCTAssertTrue(self.deviceTester.driver.hasAssessmentPassed[.wifi].orFalse)
+    XCTAssertTrue(self.assessmentTester.driver.hasAssessmentPassed[.wifi].orFalse)
+  }
+  
+  func testCheckVolumeDownButton() {
+    let exp = expectation(description: "wait for click volume down")
+    
+    assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
+    assessmentTester.driver.startAssessment(for: .volumeDownButton) { [weak self] in
+      if let self = self, self.assessmentTester.driver.hasAssessmentPassed[.volumeDownButton].orFalse {
+        exp.fulfill()
+      }
+    }
+    
+    wait(for: [exp], timeout: 100)
+    
+    XCTAssertTrue(self.assessmentTester.driver.hasAssessmentPassed[.volumeDownButton].orFalse)
+  }
+  
+  func testCheckVolumeUpButton() {
+    let exp = expectation(description: "wait for click volume up")
+    
+    assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
+    assessmentTester.driver.startAssessment(for: .volumeUpButton) { [weak self] in
+      if let self = self, self.assessmentTester.driver.hasAssessmentPassed[.volumeUpButton].orFalse {
+        exp.fulfill()
+      }
+    }
+    
+    wait(for: [exp], timeout: 100)
+    
+    XCTAssertTrue(self.assessmentTester.driver.hasAssessmentPassed[.volumeUpButton].orFalse)
+  }
+  
+  func testCheckVolumeMuteSwitch() {
+    let exp = expectation(description: "wait for click mute switch")
+    
+    assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
+    assessmentTester.driver.startAssessment(for: .muteSwitch) { [weak self] in
+      if let self = self, self.assessmentTester.driver.hasAssessmentPassed[.muteSwitch].orFalse {
+        exp.fulfill()
+      }
+    }
+    
+    wait(for: [exp], timeout: 5)
+    
+    XCTAssertTrue(self.assessmentTester.driver.hasAssessmentPassed[.muteSwitch].orFalse)
+  }
+  
+  func testCheckAccelerometer() {
+    assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
+    XCTAssertTrue(assessmentTester.driver.hasAssessmentPassed[.accelerometer].orFalse)
   }
   
   private func debugPrint(_ message: String) {

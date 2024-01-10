@@ -14,14 +14,20 @@
 		CE40ADCB2B2BD4D300F76E3C /* UIDevice+CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC02B2BD4D300F76E3C /* UIDevice+CPU.swift */; };
 		CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */; };
 		CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */; };
-		CE40ADCF2B2BD4D300F76E3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* ContentView.swift */; };
+		CE40ADCF2B2BD4D300F76E3C /* AssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* AssessmentView.swift */; };
 		CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */; };
 		CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */; };
 		CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */; };
 		CE6CCA6C2B3873C300F28F2A /* Optional+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CCA6B2B3873C300F28F2A /* Optional+Default.swift */; };
 		CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CCA6D2B39A0E100F28F2A /* PhysicalActivityAssessment.swift */; };
 		CE6CCA732B39A44000F28F2A /* JPSVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CCA722B39A44000F28F2A /* JPSVolumeButtonHandler.m */; };
-		CE6CCA762B39A4D300F28F2A /* PhysicalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CCA752B39A4D300F28F2A /* PhysicalButton.swift */; };
+		CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C78D42B4989B5003139E1 /* CommonUtils.swift */; };
+		CE8C78D82B499076003139E1 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = CE8C78D72B499076003139E1 /* Reachability */; };
+		CE8C78DA2B49926C003139E1 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C78D92B49926C003139E1 /* NetworkReachability.swift */; };
+		CE8E5E852B49735B007EC804 /* Mute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E842B49735B007EC804 /* Mute.swift */; };
+		CE8E5E872B497390007EC804 /* mute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = CE8E5E862B497390007EC804 /* mute.aiff */; };
+		CE8E5E8A2B497EDF007EC804 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE8E5E892B497EDF007EC804 /* DeviceKit */; };
+		CE8E5E8C2B497FD5007EC804 /* AssessmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */; };
 		CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */; };
 		CEF9A2B02B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +53,7 @@
 		CE40ADC02B2BD4D300F76E3C /* UIDevice+CPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+CPU.swift"; sourceTree = "<group>"; };
 		CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAsessmentApp.swift; sourceTree = "<group>"; };
-		CE40ADC52B2BD4D300F76E3C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE40ADC52B2BD4D300F76E3C /* AssessmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentView.swift; sourceTree = "<group>"; };
 		CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTester.swift; sourceTree = "<group>"; };
 		CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoAssessment.swift; sourceTree = "<group>"; };
 		CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityAssessment.swift; sourceTree = "<group>"; };
@@ -56,7 +62,12 @@
 		CE6CCA6D2B39A0E100F28F2A /* PhysicalActivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalActivityAssessment.swift; sourceTree = "<group>"; };
 		CE6CCA722B39A44000F28F2A /* JPSVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPSVolumeButtonHandler.m; sourceTree = "<group>"; };
 		CE6CCA742B39A45E00F28F2A /* JPSVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPSVolumeButtonHandler.h; sourceTree = "<group>"; };
-		CE6CCA752B39A4D300F28F2A /* PhysicalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalButton.swift; sourceTree = "<group>"; };
+		CE8C78D42B4989B5003139E1 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+		CE8C78D92B49926C003139E1 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		CE8C78DB2B4A43A0003139E1 /* DeviceAssessment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceAssessment.entitlements; sourceTree = "<group>"; };
+		CE8E5E842B49735B007EC804 /* Mute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mute.swift; sourceTree = "<group>"; };
+		CE8E5E862B497390007EC804 /* mute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mute.aiff; sourceTree = "<group>"; };
+		CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentPresenter.swift; sourceTree = "<group>"; };
 		CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerAssessment.swift; sourceTree = "<group>"; };
 		CEF9A2AD2B2B37B30034E06F /* DeviceAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAutomaticAsessmentTests.swift; sourceTree = "<group>"; };
@@ -67,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8E5E8A2B497EDF007EC804 /* DeviceKit in Frameworks */,
+				CE8C78D82B499076003139E1 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +96,15 @@
 		CE40ADB52B2BD4D300F76E3C /* DeviceAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				CE8C78DB2B4A43A0003139E1 /* DeviceAssessment.entitlements */,
 				CEE4ADE62B382745007D54E9 /* Core */,
 				CE40ADD22B2BE5E800F76E3C /* Assessment */,
 				CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */,
 				CE40ADC12B2BD4D300F76E3C /* Preview Content */,
 				CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */,
-				CE40ADC52B2BD4D300F76E3C /* ContentView.swift */,
+				CE40ADC52B2BD4D300F76E3C /* AssessmentView.swift */,
+				CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */,
+				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
 			);
 			path = DeviceAssessment;
 			sourceTree = "<group>";
@@ -154,13 +170,15 @@
 		CEE4ADE62B382745007D54E9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CE8E5E862B497390007EC804 /* mute.aiff */,
 				CE40ADBA2B2BD4D300F76E3C /* DeviceAssessment-Bridging-Header.h */,
 				CE40ADB92B2BD4D300F76E3C /* UIDeviceListener */,
 				CE6CCA712B39A28A00F28F2A /* JPSVolumeButtonHandler */,
 				CE40ADC02B2BD4D300F76E3C /* UIDevice+CPU.swift */,
 				CE40ADB82B2BD4D300F76E3C /* UIDevice+Info.swift */,
 				CE6CCA6B2B3873C300F28F2A /* Optional+Default.swift */,
-				CE6CCA752B39A4D300F28F2A /* PhysicalButton.swift */,
+				CE8E5E842B49735B007EC804 /* Mute.swift */,
+				CE8C78D92B49926C003139E1 /* NetworkReachability.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -189,6 +207,10 @@
 			dependencies = (
 			);
 			name = DeviceAssessment;
+			packageProductDependencies = (
+				CE8E5E892B497EDF007EC804 /* DeviceKit */,
+				CE8C78D72B499076003139E1 /* Reachability */,
+			);
 			productName = SpecAsessment;
 			productReference = CE5725912B294BE1000E4EC2 /* DeviceAssessment.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +262,10 @@
 				Base,
 			);
 			mainGroup = CE5725882B294BE1000E4EC2;
+			packageReferences = (
+				CE8E5E882B497EDF007EC804 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				CE8C78D62B499076003139E1 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = CE5725922B294BE1000E4EC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +283,7 @@
 			files = (
 				CE40ADCA2B2BD4D300F76E3C /* Assets.xcassets in Resources */,
 				CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */,
+				CE8E5E872B497390007EC804 /* mute.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,16 +303,19 @@
 			files = (
 				CE6CCA732B39A44000F28F2A /* JPSVolumeButtonHandler.m in Sources */,
 				CE40ADC72B2BD4D300F76E3C /* UIDevice+Info.swift in Sources */,
+				CE8E5E852B49735B007EC804 /* Mute.swift in Sources */,
 				CE40ADC92B2BD4D300F76E3C /* EEPowerInformation.m in Sources */,
 				CE6CCA6C2B3873C300F28F2A /* Optional+Default.swift in Sources */,
-				CE40ADCF2B2BD4D300F76E3C /* ContentView.swift in Sources */,
+				CE40ADCF2B2BD4D300F76E3C /* AssessmentView.swift in Sources */,
+				CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */,
 				CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
 				CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */,
 				CE40ADCB2B2BD4D300F76E3C /* UIDevice+CPU.swift in Sources */,
+				CE8E5E8C2B497FD5007EC804 /* AssessmentPresenter.swift in Sources */,
 				CE40ADC82B2BD4D300F76E3C /* UIDeviceListener.mm in Sources */,
-				CE6CCA762B39A4D300F28F2A /* PhysicalButton.swift in Sources */,
 				CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */,
+				CE8C78DA2B49926C003139E1 /* NetworkReachability.swift in Sources */,
 				CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */,
 				CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */,
 			);
@@ -430,12 +460,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DeviceAssessment/DeviceAssessment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeviceAssessment/Preview Content\"";
-				DEVELOPMENT_TEAM = 5S8HRB386G;
+				DEVELOPMENT_TEAM = 3X5NNQUKV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -446,7 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.SpecAsessment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tradein.ios.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DeviceAssessment/Core/DeviceAssessment-Bridging-Header.h";
@@ -462,12 +496,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DeviceAssessment/DeviceAssessment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeviceAssessment/Preview Content\"";
-				DEVELOPMENT_TEAM = 5S8HRB386G;
+				DEVELOPMENT_TEAM = 3X5NNQUKV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,7 +516,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.SpecAsessment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tradein.ios.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DeviceAssessment/Core/DeviceAssessment-Bridging-Header.h";
@@ -494,10 +532,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5S8HRB386G;
+				DEVELOPMENT_TEAM = 3X5NNQUKV6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.SpecAsessmentTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tradein.ios.dev.DeviceAsessmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -513,10 +551,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5S8HRB386G;
+				DEVELOPMENT_TEAM = 3X5NNQUKV6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.SpecAsessmentTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tradein.ios.dev.DeviceAsessmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -556,6 +594,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE8C78D62B499076003139E1 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CE8E5E882B497EDF007EC804 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE8C78D72B499076003139E1 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE8C78D62B499076003139E1 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+		CE8E5E892B497EDF007EC804 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE8E5E882B497EDF007EC804 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE5725892B294BE1000E4EC2 /* Project object */;
 }

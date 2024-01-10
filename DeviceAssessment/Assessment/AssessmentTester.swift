@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-enum Assessment {
+enum Assessment: CaseIterable {
   case information
   case cpu
   case storage
   case ram
   case batteryStatus
   case notJailbroken
-  case muteButton
+  case muteSwitch
   case volumeUpButton
   case volumeDownButton
   case powerButton
@@ -32,11 +32,11 @@ protocol AssessmentDriver {
   var hasAssessmentPassed: [Assessment: Bool] { get }
   var assessments: [Assessment: Any] { get }
   
-  func startAssessment(completion: (() -> Void)?)
+  func startAssessment(for type: Assessment, completion: (() -> Void)?)
 }
 
 extension AssessmentDriver {
-  func startAssessment(completion: (() -> Void)? = nil) { completion?() }
+  func startAssessment(for type: Assessment, completion: (() -> Void)? = nil) { completion?() }
 }
 
 struct AssessmentTester {

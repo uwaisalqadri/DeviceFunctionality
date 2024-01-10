@@ -53,7 +53,6 @@
 
 @implementation UIDeviceListener
 
-#if DEBUG==1
 NSThread *listenerThreadDbg;
 
 void verifyListenerThread()
@@ -66,9 +65,6 @@ void verifyListenerThread()
 }
 
 #define VERIFY_LISTENER_THREAD() verifyListenerThread()
-#else
-#define VERIFY_LISTENER_THREAD()
-#endif
 
 void * myAlloc (CFIndex allocSize, CFOptionFlags hint, void *info)
 {

@@ -9,34 +9,6 @@ import Foundation
 import UIKit
 
 public extension UIDevice {
-    
-  func MBFormatter(_ bytes: Int64) -> String {
-    let formatter = ByteCountFormatter()
-    formatter.allowedUnits = .useMB
-    formatter.countStyle = .decimal
-    formatter.includesUnit = false
-    return formatter.string(fromByteCount: bytes) as String
-  }
-  
-  var totalDiskSpaceInGB: String {
-    return ByteCountFormatter.string(fromByteCount: totalDiskSpaceInBytes, countStyle: .decimal)
-  }
-  
-  var usedDiskSpaceInGB: String {
-    return ByteCountFormatter.string(fromByteCount: usedDiskSpaceInBytes, countStyle: .decimal)
-  }
-  
-  var totalDiskSpaceInMB: String {
-    return MBFormatter(totalDiskSpaceInBytes)
-  }
-  
-  var freeDiskSpaceInMB: String {
-    return MBFormatter(freeDiskSpaceInBytes)
-  }
-  
-  var usedDiskSpaceInMB: String {
-    return MBFormatter(usedDiskSpaceInBytes)
-  }
   
   //MARK: Get raw value
   var totalDiskSpaceInBytes: Int64 {

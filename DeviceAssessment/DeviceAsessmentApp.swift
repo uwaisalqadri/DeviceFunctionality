@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import CoreMotion
 
 @main
 struct DeviceAsessmentApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      AssessmentView(presenter: AssessmentPresenter())
     }
   }
 }

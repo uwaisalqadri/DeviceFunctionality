@@ -9,13 +9,8 @@ import Foundation
 import UIKit
 
 struct DeviceInfoAssessment: AssessmentDriver {
-  private let processInfo: ProcessInfo
-  private let device: UIDevice
-  
-  init(processInfo: ProcessInfo, device: UIDevice) {
-    self.processInfo = processInfo
-    self.device = device
-  }
+  private var processInfo = ProcessInfo.processInfo
+  private var device = UIDevice.current
   
   var hasAssessmentPassed: [Assessment: Bool] {
     var results: [Assessment: Bool] = [:]
@@ -27,7 +22,7 @@ struct DeviceInfoAssessment: AssessmentDriver {
     }
     
     if let assessment = assessments[.storage] as? Storage {
-      results[.storage] = !assessment.totalRAMGB.isEmpty && !assessment.freeDiskSpaceGB.isEmpty
+      results[.storage] = !assessment.totalRAMGB.isEmpty && !assessment.totalDiskSpaceGB.isEmpty
     } else {
       results[.storage] = false
     }
@@ -48,8 +43,8 @@ struct DeviceInfoAssessment: AssessmentDriver {
         speed: Array(device.cpuInfo.values).first.orDefault
       ),
       .storage: Storage(
-        totalRAMGB: ByteCountFormatter.string(fromByteCount: Int64(processInfo.physicalMemory), countStyle: .decimal),
-        freeDiskSpaceGB: ByteCountFormatter.string(fromByteCount: device.freeDiskSpaceInBytes, countStyle: .decimal)
+        totalRAMGB: Int64(processInfo.physicalMemory).toGBFormat(),
+        totalDiskSpaceGB: device.totalDiskSpaceInBytes.toGBFormat()
       ),
       .notJailbroken: isJailbroken
     ]
@@ -84,7 +79,7 @@ extension DeviceInfoAssessment {
   
   struct Storage {
     var totalRAMGB: String
-    var freeDiskSpaceGB: String
+    var totalDiskSpaceGB: String
   }
   
 }

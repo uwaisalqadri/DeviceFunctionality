@@ -14,8 +14,8 @@
             filePath = "DeviceAssessmentTests/DeviceAutomaticAsessmentTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "DeviceAutomaticAsessmentTests"
             landmarkType = "3">
             <Locations>
@@ -62,10 +62,614 @@
             filePath = "DeviceAssessmentTests/DeviceAutomaticAsessmentTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "testCheckSIMCard()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6205608-BE9E-42C6-A51E-B0D6323471DF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E6205608-BE9E-42C6-A51E-B0D6323471DF - e61bdb60b8be2a6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Network.NWPath.Status) -&gt; () in DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "792">
+               </Location>
+               <Location
+                  uuid = "E6205608-BE9E-42C6-A51E-B0D6323471DF - e61bdb60b8be2a6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Network.NWPath.Status) -&gt; () in DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "E6205608-BE9E-42C6-A51E-B0D6323471DF - 30b1fddde3c85139"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "E6205608-BE9E-42C6-A51E-B0D6323471DF - 30b1fddde3c85139"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9298C11E-EC6A-4456-8124-DCA5D3AE854E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9298C11E-EC6A-4456-8124-DCA5D3AE854E - e61bdb60b8be2a4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Network.NWPath.Status) -&gt; () in DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "9298C11E-EC6A-4456-8124-DCA5D3AE854E - e61bdb60b8be2a4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Network.NWPath.Status) -&gt; () in DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "592">
+               </Location>
+               <Location
+                  uuid = "9298C11E-EC6A-4456-8124-DCA5D3AE854E - 30b1fddde3c85118"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "9298C11E-EC6A-4456-8124-DCA5D3AE854E - 30b1fddde3c85118"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.startAssessment(completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "420">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCDAB070-57B1-425A-8562-81C8C3B8919D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "updateWifiStatus(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BCDAB070-57B1-425A-8562-81C8C3B8919D - 97b42e3dab9d6326"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.updateWifiStatus(Network.NWPath.Status) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "BCDAB070-57B1-425A-8562-81C8C3B8919D - 97b42e3dab9d63c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.updateWifiStatus(Network.NWPath.Status) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D83DAEE9-5BCF-4C32-BC68-22F2D6C276F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "connectedSSID"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D83DAEE9-5BCF-4C32-BC68-22F2D6C276F9 - eba3762754457d10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.connectedSSID.getter : Swift.String"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "868">
+               </Location>
+               <Location
+                  uuid = "D83DAEE9-5BCF-4C32-BC68-22F2D6C276F9 - eba3762754457d10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.connectedSSID.getter : Swift.String"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "896">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "408D6494-9CD8-40E7-9F5D-7CF3EBA5A7DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "fetchSSIDInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78A81E1B-3ADE-42A0-B624-64BAC2D74935"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "connectedBSSID"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "78A81E1B-3ADE-42A0-B624-64BAC2D74935 - 603bb19dbc07e912"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.connectedBSSID.getter : Swift.String"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "868">
+               </Location>
+               <Location
+                  uuid = "78A81E1B-3ADE-42A0-B624-64BAC2D74935 - 603bb19dbc07e912"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.connectedBSSID.getter : Swift.String"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "896">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "629BB98C-D44E-4A5D-8917-643CD7A01D75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "connectedBSSID"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "629BB98C-D44E-4A5D-8917-643CD7A01D75 - 603bb19dbc07eef1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.connectedBSSID.getter : Swift.String"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+               <Location
+                  uuid = "629BB98C-D44E-4A5D-8917-643CD7A01D75 - 603bb19dbc07eef1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.ConnectivityAssessment.connectedBSSID.getter : Swift.String"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/ConnectivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "1044">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BE8600D-6AF4-458B-B13D-5E1662A59CA5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/PowerAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "hasAssessmentPassed"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3BE8600D-6AF4-458B-B13D-5E1662A59CA5 - 6307fe6bfd214073"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.PowerAssessment.hasAssessmentPassed.getter : Swift.Dictionary&lt;DeviceAssessment.Assessment, Swift.Bool&gt;"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/PowerAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "3BE8600D-6AF4-458B-B13D-5E1662A59CA5 - 6307fe6bfd214073"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.PowerAssessment.hasAssessmentPassed.getter : Swift.Dictionary&lt;DeviceAssessment.Assessment, Swift.Bool&gt;"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/PowerAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E067D73-59AE-47F5-A893-76FFD58DC0B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/AssessmentPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "startObservingVolumeDownButton()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4E067D73-59AE-47F5-A893-76FFD58DC0B8 - 2e0e7d7f8d7f4ba2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DeviceAssessment.AssessmentPresenter.startObservingVolumeDownButton() -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/AssessmentPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "4E067D73-59AE-47F5-A893-76FFD58DC0B8 - 2e0e7d7f8d7f74ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DeviceAssessment.AssessmentPresenter.startObservingVolumeDownButton() -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/AssessmentPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72A9B206-CA47-4B6D-A8B7-05A7D57DAD98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/AssessmentPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "startObservingVolumeUpButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE5E49F6-8BF9-4B25-9F22-40A6484FFB96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA32B0CD-4748-44F6-BE29-88FEEDEE2FFA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5368C6A0-2B41-44D2-85D3-C92D517209A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C171706A-D66E-4A63-83CF-A2E4D0992A1F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3036C5AF-4A4A-4F9B-92AE-2B3BAD0B1AF0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "702A5665-ACBE-4CC3-8F4D-E05D68C72C6C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "startAssessment(for:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "702A5665-ACBE-4CC3-8F4D-E05D68C72C6C - d1f1fab46eab9368"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DeviceAssessment.PhysicalActivityAssessment.startAssessment(for: DeviceAssessment.Assessment, completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "702A5665-ACBE-4CC3-8F4D-E05D68C72C6C - 5a8d2a2cb8bdf8bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in DeviceAssessment.PhysicalActivityAssessment.startAssessment(for: DeviceAssessment.Assessment, completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "DeviceAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Downloads/DeviceAssessment/DeviceAssessment/Assessment/PhysicalActivityAssessment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
