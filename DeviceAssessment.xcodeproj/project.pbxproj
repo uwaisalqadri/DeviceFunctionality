@@ -28,6 +28,8 @@
 		CE8E5E872B497390007EC804 /* mute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = CE8E5E862B497390007EC804 /* mute.aiff */; };
 		CE8E5E8A2B497EDF007EC804 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE8E5E892B497EDF007EC804 /* DeviceKit */; };
 		CE8E5E8C2B497FD5007EC804 /* AssessmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */; };
+		CE91C21D2B4E9DC700E1C413 /* AssessmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91C21C2B4E9DC700E1C413 /* AssessmentRow.swift */; };
+		CEDF265F2B4F8F0600D8D675 /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF265E2B4F8F0600D8D675 /* BiometricAuthentication.swift */; };
 		CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */; };
 		CEF9A2B02B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,9 @@
 		CE8E5E842B49735B007EC804 /* Mute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mute.swift; sourceTree = "<group>"; };
 		CE8E5E862B497390007EC804 /* mute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mute.aiff; sourceTree = "<group>"; };
 		CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentPresenter.swift; sourceTree = "<group>"; };
+		CE91C21C2B4E9DC700E1C413 /* AssessmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentRow.swift; sourceTree = "<group>"; };
+		CEDF265E2B4F8F0600D8D675 /* BiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
+		CEDF26602B4F98F100D8D675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerAssessment.swift; sourceTree = "<group>"; };
 		CEF9A2AD2B2B37B30034E06F /* DeviceAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAutomaticAsessmentTests.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		CE40ADB52B2BD4D300F76E3C /* DeviceAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				CEDF26602B4F98F100D8D675 /* Info.plist */,
 				CE8C78DB2B4A43A0003139E1 /* DeviceAssessment.entitlements */,
 				CEE4ADE62B382745007D54E9 /* Core */,
 				CE40ADD22B2BE5E800F76E3C /* Assessment */,
@@ -105,6 +111,7 @@
 				CE40ADC52B2BD4D300F76E3C /* AssessmentView.swift */,
 				CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */,
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
+				CE91C21C2B4E9DC700E1C413 /* AssessmentRow.swift */,
 			);
 			path = DeviceAssessment;
 			sourceTree = "<group>";
@@ -167,18 +174,27 @@
 			path = JPSVolumeButtonHandler;
 			sourceTree = "<group>";
 		};
+		CE91C21A2B4E9D6B00E1C413 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE40ADB92B2BD4D300F76E3C /* UIDeviceListener */,
+				CE6CCA712B39A28A00F28F2A /* JPSVolumeButtonHandler */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CEE4ADE62B382745007D54E9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CE8E5E862B497390007EC804 /* mute.aiff */,
+				CEDF265E2B4F8F0600D8D675 /* BiometricAuthentication.swift */,
 				CE40ADBA2B2BD4D300F76E3C /* DeviceAssessment-Bridging-Header.h */,
-				CE40ADB92B2BD4D300F76E3C /* UIDeviceListener */,
-				CE6CCA712B39A28A00F28F2A /* JPSVolumeButtonHandler */,
-				CE40ADC02B2BD4D300F76E3C /* UIDevice+CPU.swift */,
-				CE40ADB82B2BD4D300F76E3C /* UIDevice+Info.swift */,
-				CE6CCA6B2B3873C300F28F2A /* Optional+Default.swift */,
+				CE8E5E862B497390007EC804 /* mute.aiff */,
 				CE8E5E842B49735B007EC804 /* Mute.swift */,
 				CE8C78D92B49926C003139E1 /* NetworkReachability.swift */,
+				CE6CCA6B2B3873C300F28F2A /* Optional+Default.swift */,
+				CE40ADC02B2BD4D300F76E3C /* UIDevice+CPU.swift */,
+				CE40ADB82B2BD4D300F76E3C /* UIDevice+Info.swift */,
+				CE91C21A2B4E9D6B00E1C413 /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -302,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CCA732B39A44000F28F2A /* JPSVolumeButtonHandler.m in Sources */,
+				CEDF265F2B4F8F0600D8D675 /* BiometricAuthentication.swift in Sources */,
 				CE40ADC72B2BD4D300F76E3C /* UIDevice+Info.swift in Sources */,
 				CE8E5E852B49735B007EC804 /* Mute.swift in Sources */,
 				CE40ADC92B2BD4D300F76E3C /* EEPowerInformation.m in Sources */,
@@ -311,6 +328,7 @@
 				CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
 				CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */,
+				CE91C21D2B4E9DC700E1C413 /* AssessmentRow.swift in Sources */,
 				CE40ADCB2B2BD4D300F76E3C /* UIDevice+CPU.swift in Sources */,
 				CE8E5E8C2B497FD5007EC804 /* AssessmentPresenter.swift in Sources */,
 				CE40ADC82B2BD4D300F76E3C /* UIDeviceListener.mm in Sources */,
@@ -467,6 +485,8 @@
 				DEVELOPMENT_TEAM = 3X5NNQUKV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceAssessment/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
@@ -503,6 +523,8 @@
 				DEVELOPMENT_TEAM = 3X5NNQUKV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceAssessment/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";

@@ -13,7 +13,8 @@ class AssessmentPresenter: ObservableObject {
   
   @Published var isVolumeUpClicked = false
   @Published var isVolumeDownClicked = false
-  @Published var isMuteClicked = false
+  @Published var isMuted = false
+  @Published var isBiometricSuccess = false
   @Published var wifiSSID: String = ""
   @Published var batteryInformation = PowerAssessment.BatteryStatus(batteryMaxCapacity: 0, batteryHealth: 0.0, batteryCycleCount: 0)
   
@@ -47,15 +48,15 @@ class AssessmentPresenter: ObservableObject {
     return (assessmentTester.driver.assessments[.cpu] as? DeviceInfoAssessment.CPUInformation)?.name ?? ""
   }
   
-  func startObservingMuteSwitch() {
+  func startMuteSwitchAssessment() {
     let assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
     assessmentTester.driver.startAssessment(for: .muteSwitch) { [weak self] in
       guard let self = self else { return }
-      self.isMuteClicked = assessmentTester.driver.hasAssessmentPassed[.muteSwitch] ?? false
+      self.isMuted = assessmentTester.driver.hasAssessmentPassed[.muteSwitch] ?? false
     }
   }
   
-  func startObservingVolumeUpButton() {
+  func startVolumeUpAssessment() {
     let assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
     assessmentTester.driver.startAssessment(for: .volumeUpButton) { [weak self] in
       guard let self = self else { return }
@@ -63,7 +64,7 @@ class AssessmentPresenter: ObservableObject {
     }
   }
   
-  func startObservingVolumeDownButton() {
+  func startVolumeDownAssessment() {
     let assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
     assessmentTester.driver.startAssessment(for: .volumeDownButton) { [weak self] in
       guard let self = self else { return }
@@ -71,7 +72,20 @@ class AssessmentPresenter: ObservableObject {
     }
   }
   
-  func startObservingBatteryStatus() {
+  func startBiometricAssessment() {
+    let assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
+    assessmentTester.driver.startAssessment(for: .biometric) { [weak self] in
+      guard let self = self else { return }
+      self.isBiometricSuccess = assessmentTester.driver.hasAssessmentPassed[.biometric] ?? false
+    }
+  }
+  
+  func startVibrationAssessment() {
+    let assessmentTester = AssessmentTester(driver: PhysicalActivityAssessment())
+    assessmentTester.driver.startAssessment(for: .vibration)
+  }
+  
+  func startBatteryStatusAssessment() {
     let assessment = PowerAssessment()
     let assessmentTester = AssessmentTester(driver: assessment)
     

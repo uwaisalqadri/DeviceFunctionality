@@ -28,13 +28,19 @@ struct AssessmentView: View {
           AssessmentRow(iconName: "cube.box", title: "RAM", value: presenter.getDeviceRAM())
           AssessmentRow(iconName: "folder", title: "Storage", value: presenter.getDeviceStorage())
           AssessmentRow(iconName: "battery.100", title: "Battery Status", value: "\(presenter.batteryInformation.batteryMaxCapacity)")
-//          AssessmentRow(iconName: "faceid", title: "Biometric", value: )
+          AssessmentRow(iconName: "faceid", title: "Biometric Success", value: presenter.isBiometricSuccess.toYesNo())
+            .onTapGesture {
+              presenter.startBiometricAssessment()
+            }
           AssessmentRow(iconName: "globe", title: "Accelerometer", value: presenter.isAccelerometerAvailable.toYesNo())
-          AssessmentRow(iconName: "bell.slash", title: "Silent Mode", value: presenter.isMuteClicked.toOnOff())
+          AssessmentRow(iconName: "bell.slash", title: "Silent Mode", value: presenter.isMuted.toOnOff())
           AssessmentRow(iconName: "speaker.3.fill", title: "Volume Up is Clicked", value: presenter.isVolumeUpClicked.toYesNo())
           AssessmentRow(iconName: "speaker.1.fill", title: "Volume Down is Clicked", value: presenter.isVolumeDownClicked.toYesNo())
 //          AssessmentRow(iconName: "globe", title: "Power Button")
-//          AssessmentRow(iconName: "waveform.path", title: "Vibration")
+          AssessmentRow(iconName: "waveform.path", title: "Vibration 3x", value: true.toYesNo())
+            .onTapGesture {
+              presenter.startVibrationAssessment()
+            }
 //          AssessmentRow(iconName: "camera", title: "Camera")
           AssessmentRow(iconName: "phone", title: "SIM", value: presenter.carrierName)
           AssessmentRow(iconName: "wifi", title: "WIFI", value: presenter.wifiSSID)
@@ -43,28 +49,10 @@ struct AssessmentView: View {
       }
     }.onAppear {
       presenter.startObservingConnectivity()
-      presenter.startObservingBatteryStatus()
-      presenter.startObservingVolumeUpButton()
-      presenter.startObservingVolumeDownButton()
-      presenter.startObservingMuteSwitch()
-    }
-  }
-}
-
-struct AssessmentRow: View {
-  let iconName: String
-  let title: String
-  let value: String
-  
-  var body: some View {
-    VStack(alignment: .leading, spacing: 8) {
-      Image(systemName: iconName)
-        .imageScale(.large)
-        .foregroundColor(.accentColor)
-      
-      Text(title + ": ") +
-      Text(value)
-        .bold()
+      presenter.startBatteryStatusAssessment()
+      presenter.startVolumeUpAssessment()
+      presenter.startVolumeDownAssessment()
+      presenter.startMuteSwitchAssessment()
     }
   }
 }
