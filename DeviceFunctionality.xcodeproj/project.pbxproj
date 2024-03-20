@@ -18,7 +18,7 @@
 		CE066E282BAB2BD1007C7014 /* PermissionFailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E272BAB2BD1007C7014 /* PermissionFailed.swift */; };
 		CE066E2A2BAB2BF5007C7014 /* BiometricFailedReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E292BAB2BF5007C7014 /* BiometricFailedReason.swift */; };
 		CE066E2D2BAB2DE7007C7014 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE066E2C2BAB2DE7007C7014 /* DeviceKit */; };
-		CE066E2F2BAB2E16007C7014 /* BiometricIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E2E2BAB2E16007C7014 /* BiometricIDAuth.swift */; };
+		CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E2E2BAB2E16007C7014 /* BiometricAuthentication.swift */; };
 		CE40ADCA2B2BD4D300F76E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */; };
 		CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */; };
 		CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */; };
@@ -27,6 +27,7 @@
 		CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */; };
 		CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */; };
 		CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CCA6D2B39A0E100F28F2A /* PhysicalActivityAssessment.swift */; };
+		CE7592AC2BAB9DA300D59361 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7592AB2BAB9DA300D59361 /* SpeechSynthesizer.swift */; };
 		CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C78D42B4989B5003139E1 /* CommonUtils.swift */; };
 		CE8E5E852B49735B007EC804 /* Mute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E842B49735B007EC804 /* Mute.swift */; };
 		CE8E5E872B497390007EC804 /* mute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = CE8E5E862B497390007EC804 /* mute.aiff */; };
@@ -57,7 +58,7 @@
 		CE066E252BAB2BC2007C7014 /* DeviceBasicInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBasicInformation.swift; sourceTree = "<group>"; };
 		CE066E272BAB2BD1007C7014 /* PermissionFailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionFailed.swift; sourceTree = "<group>"; };
 		CE066E292BAB2BF5007C7014 /* BiometricFailedReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricFailedReason.swift; sourceTree = "<group>"; };
-		CE066E2E2BAB2E16007C7014 /* BiometricIDAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricIDAuth.swift; sourceTree = "<group>"; };
+		CE066E2E2BAB2E16007C7014 /* BiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
 		CE40ADBA2B2BD4D300F76E3C /* DeviceFunctionality-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeviceFunctionality-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityAssessment.swift; sourceTree = "<group>"; };
 		CE5725912B294BE1000E4EC2 /* DeviceFunctionality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceFunctionality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CCA6D2B39A0E100F28F2A /* PhysicalActivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalActivityAssessment.swift; sourceTree = "<group>"; };
+		CE7592AB2BAB9DA300D59361 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		CE8C78D42B4989B5003139E1 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		CE8E5E842B49735B007EC804 /* Mute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mute.swift; sourceTree = "<group>"; };
 		CE8E5E862B497390007EC804 /* mute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mute.aiff; sourceTree = "<group>"; };
@@ -112,7 +114,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CE066E302BAB2E6D007C7014 /* Presenter */ = {
+		CE066E302BAB2E6D007C7014 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */,
@@ -121,13 +123,13 @@
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
 				CE91C21C2B4E9DC700E1C413 /* AssessmentRow.swift */,
 			);
-			path = Presenter;
+			path = View;
 			sourceTree = "<group>";
 		};
 		CE40ADB52B2BD4D300F76E3C /* DeviceFunctionality */ = {
 			isa = PBXGroup;
 			children = (
-				CE066E302BAB2E6D007C7014 /* Presenter */,
+				CE066E302BAB2E6D007C7014 /* View */,
 				CE40ADD22B2BE5E800F76E3C /* Assessment */,
 				CEE4ADE62B382745007D54E9 /* Core */,
 				CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */,
@@ -185,7 +187,8 @@
 				CE8E5E842B49735B007EC804 /* Mute.swift */,
 				CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */,
 				CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */,
-				CE066E2E2BAB2E16007C7014 /* BiometricIDAuth.swift */,
+				CE066E2E2BAB2E16007C7014 /* BiometricAuthentication.swift */,
+				CE7592AB2BAB9DA300D59361 /* SpeechSynthesizer.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -306,12 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7592AC2BAB9DA300D59361 /* SpeechSynthesizer.swift in Sources */,
 				CE066E1C2BAB2B7E007C7014 /* Battery.swift in Sources */,
 				CE8E5E852B49735B007EC804 /* Mute.swift in Sources */,
 				CE40ADCF2B2BD4D300F76E3C /* AssessmentView.swift in Sources */,
 				CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */,
 				CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */,
-				CE066E2F2BAB2E16007C7014 /* BiometricIDAuth.swift in Sources */,
+				CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */,
 				CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
 				CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */,

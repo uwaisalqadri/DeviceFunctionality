@@ -40,7 +40,8 @@ public class PhysicalActivityAssessment: NSObject, AssessmentDriver {
       .accelerometer,
       .microphone,
       .earSpeaker,
-      .mainSpeaker
+      .mainSpeaker,
+      .vibration
     ]
     
     for type in assessmentTypes {
@@ -60,7 +61,8 @@ public class PhysicalActivityAssessment: NSObject, AssessmentDriver {
     .accelerometer: motionManager.isAccelerometerAvailable,
     .microphone: false,
     .earSpeaker: false,
-    .mainSpeaker: false
+    .mainSpeaker: false,
+    .vibration: false
   ]
   
   public func startAssessment(for type: Assessment, completion: (() -> Void)? = nil) {
@@ -140,7 +142,32 @@ public class PhysicalActivityAssessment: NSObject, AssessmentDriver {
         self.assessments[.microphone] = PermissionFailed.microphoneNotPermitted
         completion?()
       })
-      
+    case .vibration:
+      let randomCount = Int.random(in: 1...4)
+      for index in stride(from: 1, through: randomCount, by: 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(index)) {
+          if Device.current.isPad {
+            let messagingAlertSoundId: SystemSoundID = 1003
+            AudioServicesPlayAlertSoundWithCompletion(messagingAlertSoundId) {
+              AudioServicesDisposeSystemSoundID(messagingAlertSoundId)
+            }
+          } else {
+            AudioServicesPlayAlertSoundWithCompletion(kSystemSoundID_Vibrate) {
+              AudioServicesDisposeSystemSoundID(kSystemSoundID_Vibrate)
+            }
+          }
+        }
+      }
+    case .mainSpeaker:
+      let randomCount = Int.random(in: 1...4)
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        SpeechSynthesizer.shared.speak("\(randomCount)", useEarSpeaker: false)
+      }
+    case .earSpeaker:
+      let randomCount = Int.random(in: 1...4)
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        SpeechSynthesizer.shared.speak("\(randomCount)", useEarSpeaker: true)
+      }
       
     default:
       break
