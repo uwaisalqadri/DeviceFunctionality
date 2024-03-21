@@ -22,7 +22,7 @@
 		CE40ADCA2B2BD4D300F76E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */; };
 		CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */; };
 		CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */; };
-		CE40ADCF2B2BD4D300F76E3C /* AssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* AssessmentView.swift */; };
+		CE40ADCF2B2BD4D300F76E3C /* DeviceFunctionalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */; };
 		CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */; };
 		CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */; };
 		CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */; };
@@ -32,8 +32,9 @@
 		CE8E5E852B49735B007EC804 /* Mute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E842B49735B007EC804 /* Mute.swift */; };
 		CE8E5E872B497390007EC804 /* mute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = CE8E5E862B497390007EC804 /* mute.aiff */; };
 		CE8E5E8C2B497FD5007EC804 /* AssessmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */; };
-		CE91C21D2B4E9DC700E1C413 /* AssessmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91C21C2B4E9DC700E1C413 /* AssessmentRow.swift */; };
+		CE91C21D2B4E9DC700E1C413 /* FunctionalityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */; };
 		CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */; };
+		CEEE205D2BAC0C7300E74937 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = CEEE205C2BAC0C7300E74937 /* AlertToast */; };
 		CEF9A2B02B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +64,7 @@
 		CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAsessmentApp.swift; sourceTree = "<group>"; };
-		CE40ADC52B2BD4D300F76E3C /* AssessmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentView.swift; sourceTree = "<group>"; };
+		CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceFunctionalityView.swift; sourceTree = "<group>"; };
 		CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTester.swift; sourceTree = "<group>"; };
 		CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoAssessment.swift; sourceTree = "<group>"; };
 		CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityAssessment.swift; sourceTree = "<group>"; };
@@ -74,7 +75,7 @@
 		CE8E5E842B49735B007EC804 /* Mute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mute.swift; sourceTree = "<group>"; };
 		CE8E5E862B497390007EC804 /* mute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mute.aiff; sourceTree = "<group>"; };
 		CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentPresenter.swift; sourceTree = "<group>"; };
-		CE91C21C2B4E9DC700E1C413 /* AssessmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentRow.swift; sourceTree = "<group>"; };
+		CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalityRow.swift; sourceTree = "<group>"; };
 		CEDF26602B4F98F100D8D675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerAssessment.swift; sourceTree = "<group>"; };
 		CEF9A2AD2B2B37B30034E06F /* DeviceFunctionalityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceFunctionalityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE066E2D2BAB2DE7007C7014 /* DeviceKit in Frameworks */,
+				CEEE205D2BAC0C7300E74937 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,10 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */,
-				CE40ADC52B2BD4D300F76E3C /* AssessmentView.swift */,
+				CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */,
 				CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */,
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
-				CE91C21C2B4E9DC700E1C413 /* AssessmentRow.swift */,
+				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 			name = DeviceFunctionality;
 			packageProductDependencies = (
 				CE066E2C2BAB2DE7007C7014 /* DeviceKit */,
+				CEEE205C2BAC0C7300E74937 /* AlertToast */,
 			);
 			productName = SpecAsessment;
 			productReference = CE5725912B294BE1000E4EC2 /* DeviceFunctionality.app */;
@@ -273,6 +276,7 @@
 			mainGroup = CE5725882B294BE1000E4EC2;
 			packageReferences = (
 				CE066E2B2BAB2DE7007C7014 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				CEEE205B2BAC0C7200E74937 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = CE5725922B294BE1000E4EC2 /* Products */;
 			projectDirPath = "";
@@ -312,14 +316,14 @@
 				CE7592AC2BAB9DA300D59361 /* SpeechSynthesizer.swift in Sources */,
 				CE066E1C2BAB2B7E007C7014 /* Battery.swift in Sources */,
 				CE8E5E852B49735B007EC804 /* Mute.swift in Sources */,
-				CE40ADCF2B2BD4D300F76E3C /* AssessmentView.swift in Sources */,
+				CE40ADCF2B2BD4D300F76E3C /* DeviceFunctionalityView.swift in Sources */,
 				CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */,
 				CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */,
 				CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */,
 				CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
 				CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */,
-				CE91C21D2B4E9DC700E1C413 /* AssessmentRow.swift in Sources */,
+				CE91C21D2B4E9DC700E1C413 /* FunctionalityRow.swift in Sources */,
 				CE066E282BAB2BD1007C7014 /* PermissionFailed.swift in Sources */,
 				CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */,
 				CE066E262BAB2BC2007C7014 /* DeviceBasicInformation.swift in Sources */,
@@ -622,6 +626,14 @@
 				minimumVersion = 5.2.2;
 			};
 		};
+		CEEE205B2BAC0C7200E74937 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -629,6 +641,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE066E2B2BAB2DE7007C7014 /* XCRemoteSwiftPackageReference "DeviceKit" */;
 			productName = DeviceKit;
+		};
+		CEEE205C2BAC0C7300E74937 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEE205B2BAC0C7200E74937 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

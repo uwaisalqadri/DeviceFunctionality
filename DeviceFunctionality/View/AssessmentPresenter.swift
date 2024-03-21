@@ -13,6 +13,11 @@ import Foundation
 
 class AssessmentPresenter: ObservableObject {
  
+  @Published var isCpuAssessment = false
+  @Published var isStorageAssessment = false
+  @Published var isSilentSwitchAssessment = false
+  @Published var isSilentSwitched = false
+  
   private var cancellables = Set<AnyCancellable>()
   
   func startAssessment(for assessment: Assessment) -> AnyPublisher<Bool, Error> {

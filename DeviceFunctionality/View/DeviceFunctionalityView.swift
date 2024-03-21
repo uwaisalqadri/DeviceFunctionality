@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DeviceFunctionalityView.swift
 //  SpecAsessment
 //
 //  Created by Uwais Alqadri on 13/12/23.
@@ -8,8 +8,9 @@
 import SwiftUI
 import DeviceKit
 import CoreMotion
+import AlertToast
 
-struct AssessmentView: View {
+struct DeviceFunctionalityView: View {
   
   @ObservedObject var presenter: AssessmentPresenter
   
@@ -18,8 +19,12 @@ struct AssessmentView: View {
       ScrollView {
         VStack(spacing: 14) {
           HStack(spacing: 14) {
-            FunctionalityRow(icon: "📱", title: "CPU", value: "Test the performance of your device's CPU")
-            FunctionalityRow(icon: "🫙", title: "Storage", value: "Ensure your device's storage is functioning optimally")
+            FunctionalityRow(icon: "📱", title: "CPU", value: "Test the performance of your device's CPU") {
+              presenter.isCpuAssessment.toggle()
+            }
+            FunctionalityRow(icon: "🫙", title: "Storage", value: "Ensure your device's storage is functioning optimally") {
+              presenter.isStorageAssessment.toggle()
+            }
           }.padding(.horizontal, 14).padding(.top, 20)
           
           HStack(spacing: 14) {
@@ -28,7 +33,13 @@ struct AssessmentView: View {
           }.padding(.horizontal, 14)
           
           HStack(spacing: 14) {
-            FunctionalityRow(icon: "🔕", title: "Silent Switch", value: "Test the functionality of your device's silent switch")
+            FunctionalityRow(icon: "🔕", title: "Silent Switch", value: "Test the functionality of your device's silent switch") {
+              presenter.isSilentSwitchAssessment.toggle()
+              DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                presenter.isSilentSwitchAssessment.toggle()
+                presenter.isSilentSwitched.toggle()
+              }
+            }
             FunctionalityRow(icon: "🔊", title: "Volume Up", value: "Ensure the volume up button is responsive")
           }.padding(.horizontal, 14)
           
@@ -81,12 +92,24 @@ struct AssessmentView: View {
         }
       }
       .navigationTitle("Device Health")
+      .toast(isPresenting: $presenter.isCpuAssessment) {
+        AlertToast(displayMode: .hud, type: .regular, title: "📱 CPU is healthy!")
+      }
+      .toast(isPresenting: $presenter.isStorageAssessment) {
+        AlertToast(displayMode: .hud, type: .regular, title: "🫙 Storage is safe!")
+      }
+      .toast(isPresenting: $presenter.isSilentSwitchAssessment, duration: 1_000_000, tapToDismiss: false) {
+        AlertToast(displayMode: .hud, type: .regular, title: "🔕 Turn On/Off the silent switch")
+      }
+      .toast(isPresenting: $presenter.isSilentSwitched) {
+        AlertToast(displayMode: .hud, type: .complete(.green), title: "Silent Switch worked!")
+      }
     }
   }
 }
 
-struct AssessmentView_Previews: PreviewProvider {
+struct DeviceFunctionalityView_Previews: PreviewProvider {
   static var previews: some View {
-    AssessmentView(presenter: AssessmentPresenter())
+    DeviceFunctionalityView(presenter: AssessmentPresenter())
   }
 }

@@ -16,6 +16,7 @@ struct FunctionalityRow: View {
   
   var body: some View {
     Button(action: {
+      UIImpactFeedbackGenerator().impactOccurred()
       onTestFunction?()
     }) {
       VStack(alignment: .leading, spacing: 0) {
