@@ -21,7 +21,7 @@
 		CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E2E2BAB2E16007C7014 /* BiometricAuthentication.swift */; };
 		CE40ADCA2B2BD4D300F76E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */; };
 		CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */; };
-		CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */; };
+		CE40ADCD2B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */; };
 		CE40ADCF2B2BD4D300F76E3C /* DeviceFunctionalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */; };
 		CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */; };
 		CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */; };
@@ -63,7 +63,7 @@
 		CE40ADBA2B2BD4D300F76E3C /* DeviceFunctionality-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeviceFunctionality-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAsessmentApp.swift; sourceTree = "<group>"; };
+		CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceFunctionalityAsessmentApp.swift; sourceTree = "<group>"; };
 		CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceFunctionalityView.swift; sourceTree = "<group>"; };
 		CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTester.swift; sourceTree = "<group>"; };
 		CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoAssessment.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		CE066E302BAB2E6D007C7014 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE40ADC32B2BD4D300F76E3C /* DeviceAsessmentApp.swift */,
+				CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */,
 				CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */,
 				CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */,
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
@@ -322,7 +322,7 @@
 				CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */,
 				CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
-				CE40ADCD2B2BD4D300F76E3C /* DeviceAsessmentApp.swift in Sources */,
+				CE40ADCD2B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift in Sources */,
 				CE91C21D2B4E9DC700E1C413 /* FunctionalityRow.swift in Sources */,
 				CE066E282BAB2BD1007C7014 /* PermissionFailed.swift in Sources */,
 				CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */,
@@ -486,10 +486,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceFunctionality/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow access to your microphone to do assessment";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow access for speech recognition to do assessment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -500,7 +504,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tradein.ios.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functionality;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DeviceFunctionality/Core/DeviceFunctionality-Bridging-Header.h";
@@ -524,10 +528,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceFunctionality/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow access to your microphone to do assessment";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow access for speech recognition to do assessment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -538,7 +546,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tradein.ios.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functionality;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DeviceFunctionality/Core/DeviceFunctionality-Bridging-Header.h";

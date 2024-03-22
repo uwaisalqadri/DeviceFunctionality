@@ -12,7 +12,7 @@ import CoreMotion
 struct DeviceFunctionalityAsessmentApp: App {
   var body: some Scene {
     WindowGroup {
-      DeviceFunctionalityView(presenter: AssessmentPresenter())
+      DeviceFunctionalityView()
     }
   }
 }

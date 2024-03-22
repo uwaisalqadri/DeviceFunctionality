@@ -7,7 +7,6 @@
 
 import CoreBluetooth
 import CoreLocation
-import CoreTelephony
 import Foundation
 import Network
 import SystemConfiguration.CaptiveNetwork
@@ -16,7 +15,6 @@ import UIKit
 public class ConnectivityAssessment: NSObject, AssessmentDriver {
   private var wifiPathMonitor: NWPathMonitor?
   private var cellularPathMonitor: NWPathMonitor?
-  private let telephonyInfo = CTTelephonyNetworkInfo()
   private let locationManager = CLLocationManager()
   private var centralManager: CBCentralManager?
   

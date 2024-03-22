@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>NSFaceIDUsageDescription - 2</key>
+	<string>Allow access to your Face ID to do biometric assessment</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription - 2</key>
+	<string>Allow access to your location to do assessment</string>
+	<key>NSLocationAlwaysUsageDescription - 2</key>
+	<string>Allow access to your location to do assessment</string>
+	<key>NSLocationWhenInUseUsageDescription - 2</key>
+	<string>Allow access to your location to do assessment</string>
+</dict>
 </plist>

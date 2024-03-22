@@ -12,65 +12,104 @@ import AudioToolbox
 import Foundation
 
 class AssessmentPresenter: ObservableObject {
- 
-  @Published var isCpuAssessment = false
-  @Published var isStorageAssessment = false
-  @Published var isSilentSwitchAssessment = false
-  @Published var isSilentSwitched = false
+  
+  @Published var currentAssessment: (assessment: Assessment, isRunning: Bool) = (.cpu, false)
+  @Published var isAssessmentPassed = false
   
   private var cancellables = Set<AnyCancellable>()
+  
+  lazy var physicalDriver: AssessmentDriver = {
+    return AssessmentTester(driver: .physicalActivity).driver
+  }()
+  
+  lazy var deviceDriver: AssessmentDriver = {
+    return AssessmentTester(driver: .deviceInfo).driver
+  }()
+  
+  lazy var connectivityDriver: AssessmentDriver = {
+    return AssessmentTester(driver: .connectivity).driver
+  }()
+  
+  lazy var powerDriver: AssessmentDriver = {
+    return AssessmentTester(driver: .power).driver
+  }()
+  
+  func runningAssessment(for assessment: Assessment) {
+    currentAssessment = (assessment, !assessment.testingMessage.isEmpty)
+    startAssessment(for: assessment)
+      .receive(on: RunLoop.main)
+      .sink(
+        receiveCompletion: { completion in
+          if case .finished = completion {
+            self.currentAssessment = (assessment, false)
+          }
+        },
+        receiveValue: { isPassed in
+          self.isAssessmentPassed = isPassed
+        }
+      )
+      .store(in: &cancellables)
+  }
   
   func startAssessment(for assessment: Assessment) -> AnyPublisher<Bool, Error> {
     return Future<Bool, Error> { promise in
       switch assessment {
       case .cpu:
-        self.assessment(driver: .deviceInfo).startAssessment(for: assessment) {
-          if let cpu = self.assessment(driver: .deviceInfo).assessments[assessment] as? CpuInformation {
-            promise(.success(cpu.model?.isEmpty != true))
-          }
+        if let cpu = self.deviceDriver.assessments[assessment] as? CpuInformation {
+          promise(.success(cpu.model?.isEmpty != true))
         }
+        
       case .storage:
-        self.assessment(driver: .deviceInfo).startAssessment(for: assessment) {
-          if let storage = self.assessment(driver: .deviceInfo).assessments[assessment] as? Storage {
+        self.deviceDriver.startAssessment(for: assessment) {
+          if let storage = self.deviceDriver.assessments[assessment] as? Storage {
             promise(.success(storage.totalSpace?.isEmpty != true))
           }
         }
+        
       case .batteryStatus:
-        self.assessment(driver: .deviceInfo).startAssessment(for: assessment) {
-          if let battery = self.assessment(driver: .deviceInfo).assessments[assessment] as? Battery {
-            promise(.success(battery.technology?.isEmpty != true))
-          }
+        if let battery = self.powerDriver.assessments[assessment] as? Battery {
+          promise(.success(battery.technology?.isEmpty != true))
         }
+        
       case .rootStatus:
-        if let device = self.assessment(driver: .deviceInfo).assessments[assessment] as? DeviceBasicInformation {
-          promise(.success(device.isNotJailBroken))
-        }
+        promise(.success(self.deviceDriver.hasAssessmentPassed[assessment] ?? false))
+        
       case .volumeUp, .volumeDown, .silentSwitch, .biometric, .proximity, .accelerometer, .microphone:
-        self.assessment(driver: .physicalActivity).startAssessment(for: assessment) {
-          if let reason = self.assessment(driver: .physicalActivity).assessments[.biometric] as? BiometricFailedReason {
+        self.physicalDriver.startAssessment(for: assessment) {
+          if let reason = self.physicalDriver.assessments[.biometric] as? BiometricFailedReason {
             promise(.failure(reason))
+            return
           }
           
-          if let failure = self.assessment(driver: .physicalActivity).assessments[.microphone] as? PermissionFailed {
+          if let failure = self.physicalDriver.assessments[.microphone] as? PermissionFailed {
             promise(.failure(failure))
+            return
           }
           
-          promise(.success(self.assessment(driver: .physicalActivity).hasAssessmentPassed[assessment] ?? false))
+          promise(.success(self.physicalDriver.hasAssessmentPassed[assessment] ?? false))
         }
       case .powerButton:
-        let oldBrightness = UIScreen.main.brightness
-        let newBrightness = max(0.01, min(1.0, oldBrightness + (oldBrightness <= 0.01 ? 0.01 : -0.01)))
-        UIScreen.main.brightness = newBrightness
-        promise(.success(abs(oldBrightness - newBrightness) > 0.001))
+        NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)
+          .map { _ in true }
+          .sink { isTriggered in
+            let oldBrightness = UIScreen.main.brightness
+            let newBrightness = max(0.01, min(1.0, oldBrightness + (oldBrightness <= 0.01 ? 0.01 : -0.01)))
+            UIScreen.main.brightness = newBrightness
+            promise(.success(abs(oldBrightness - newBrightness) > 0.001))
+          }
+          .store(in: &self.cancellables)
         
       case .camera:
         promise(.success(true))
+        
       case .touchscreen:
         promise(.success(true))
+        
       case .sim, .wifi, .bluetooth, .gps:
-        self.assessment(driver: .connectivity).startAssessment(for: assessment) {
-          promise(.success(self.assessment(driver: .connectivity).hasAssessmentPassed[assessment] ?? false))
+        self.connectivityDriver.startAssessment(for: assessment) {
+          promise(.success(self.connectivityDriver.hasAssessmentPassed[assessment] ?? false))
         }
+        
       case .homeButton:
         NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)
           .map { _ in true }
@@ -78,10 +117,15 @@ class AssessmentPresenter: ObservableObject {
             promise(.success(isTriggered))
           }
           .store(in: &self.cancellables)
+        
       case .mainSpeaker, .earSpeaker, .vibration:
-        self.assessment(driver: .physicalActivity).startAssessment(for: assessment)
+        self.physicalDriver.startAssessment(for: assessment) {
+          promise(.success(true))
+        }
+        
       case .deadpixel:
         promise(.success(true))
+        
       case .rotation:
         NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)
           .map { _ in true }
@@ -89,12 +133,9 @@ class AssessmentPresenter: ObservableObject {
             promise(.success(isTriggered))
           }
           .store(in: &self.cancellables)
+        
       }
     }
     .eraseToAnyPublisher()
-  }
-  
-  private func assessment(driver: AssessmentTester.AssessmentDriverType) -> AssessmentDriver {
-    return AssessmentTester(driver: driver).driver
   }
 }

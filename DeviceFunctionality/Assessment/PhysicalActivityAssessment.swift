@@ -51,14 +51,14 @@ public class PhysicalActivityAssessment: NSObject, AssessmentDriver {
     return results
   }
   
-  public lazy var assessments: [Assessment: Any] = [
+  public var assessments: [Assessment: Any] = [
     .silentSwitch: false,
     .volumeUp: false,
     .volumeDown: false,
     .biometric: false,
     .powerButton: false,
     .proximity: false,
-    .accelerometer: motionManager.isAccelerometerAvailable,
+    .accelerometer: false,
     .microphone: false,
     .earSpeaker: false,
     .mainSpeaker: false,
@@ -156,18 +156,25 @@ public class PhysicalActivityAssessment: NSObject, AssessmentDriver {
               AudioServicesDisposeSystemSoundID(kSystemSoundID_Vibrate)
             }
           }
+          
+          completion?()
         }
       }
     case .mainSpeaker:
       let randomCount = Int.random(in: 1...4)
       DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
         SpeechSynthesizer.shared.speak("\(randomCount)", useEarSpeaker: false)
+        completion?()
       }
     case .earSpeaker:
       let randomCount = Int.random(in: 1...4)
       DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
         SpeechSynthesizer.shared.speak("\(randomCount)", useEarSpeaker: true)
+        completion?()
       }
+    case .accelerometer:
+      self.assessments[.accelerometer] = motionManager.isAccelerometerAvailable
+      completion?()
       
     default:
       break

@@ -13,7 +13,7 @@ class SpeechSynthesizer {
   private let synthesizer = AVSpeechSynthesizer()
   private var audioSession = AVAudioSession.sharedInstance()
   
-  func speak(_ text: String, useEarSpeaker: Bool) {
+  func speak(_ text: String, useEarSpeaker: Bool, language: String = "en-US") {
     do {
       if useEarSpeaker {
         try audioSession.setCategory(.playAndRecord, options: .duckOthers)
@@ -27,7 +27,7 @@ class SpeechSynthesizer {
     
     let utterance = AVSpeechUtterance(string: text)
     utterance.rate = AVSpeechUtteranceDefaultSpeechRate // Speech rate (0.0 to 1.0)
-    utterance.voice = AVSpeechSynthesisVoice(language: "id-ID") // Voice language
+    utterance.voice = AVSpeechSynthesisVoice(language: language) // Voice language
     
     synthesizer.speak(utterance)
   }

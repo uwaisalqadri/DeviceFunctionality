@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct FunctionalityRow: View {
-  let icon: String
-  let title: String
-  let value: String
+  let item: Assessment
   
   var onTestFunction: (() -> Void)?
   
@@ -20,17 +18,17 @@ struct FunctionalityRow: View {
       onTestFunction?()
     }) {
       VStack(alignment: .leading, spacing: 0) {
-        Text(icon)
+        Text(item.icon)
           .font(.system(size: 30))
           .frame(maxWidth: .infinity, alignment: .leading)
         
         Spacer()
         
-        Text(title)
+        Text(item.title)
           .bold()
           .padding(.top, 16)
         
-        Text(value)
+        Text(item.value)
           .font(.system(size: 14))
           .padding(.top, 3)
           .fixedSize(horizontal: false, vertical: true)
@@ -46,6 +44,6 @@ struct FunctionalityRow: View {
 }
 
 #Preview {
-  FunctionalityRow(icon: "📱", title: "CPU", value: "Let's see if something weird happens on this")
+  FunctionalityRow(item: .batteryStatus)
     .frame(width: 200)
 }
