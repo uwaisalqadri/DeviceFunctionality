@@ -19,6 +19,7 @@
 		CE066E2A2BAB2BF5007C7014 /* BiometricFailedReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E292BAB2BF5007C7014 /* BiometricFailedReason.swift */; };
 		CE066E2D2BAB2DE7007C7014 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE066E2C2BAB2DE7007C7014 /* DeviceKit */; };
 		CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E2E2BAB2E16007C7014 /* BiometricAuthentication.swift */; };
+		CE11C48A2BB1105700EC3028 /* Assessment+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */; };
 		CE40ADCA2B2BD4D300F76E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */; };
 		CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */; };
 		CE40ADCD2B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */; };
@@ -60,6 +61,7 @@
 		CE066E272BAB2BD1007C7014 /* PermissionFailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionFailed.swift; sourceTree = "<group>"; };
 		CE066E292BAB2BF5007C7014 /* BiometricFailedReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricFailedReason.swift; sourceTree = "<group>"; };
 		CE066E2E2BAB2E16007C7014 /* BiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
+		CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assessment+Ext.swift"; sourceTree = "<group>"; };
 		CE40ADBA2B2BD4D300F76E3C /* DeviceFunctionality-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeviceFunctionality-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */,
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
 				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
+				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7592AC2BAB9DA300D59361 /* SpeechSynthesizer.swift in Sources */,
+				CE11C48A2BB1105700EC3028 /* Assessment+Ext.swift in Sources */,
 				CE066E1C2BAB2B7E007C7014 /* Battery.swift in Sources */,
 				CE8E5E852B49735B007EC804 /* Mute.swift in Sources */,
 				CE40ADCF2B2BD4D300F76E3C /* DeviceFunctionalityView.swift in Sources */,
@@ -497,8 +501,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,8 +542,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

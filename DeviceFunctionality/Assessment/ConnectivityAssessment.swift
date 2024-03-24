@@ -53,7 +53,7 @@ public class ConnectivityAssessment: NSObject, AssessmentDriver {
       cellularPathMonitor?.start(queue: cellularConnectionQueue)
       
       cellularPathMonitor?.pathUpdateHandler = { [weak self] path in
-        guard path.status == .satisfied && path.usesInterfaceType(.cellular) else { return }
+        guard path.usesInterfaceType(.cellular) else { return }
         
         self?.assessments[.sim] = true
         completion?()
@@ -65,7 +65,7 @@ public class ConnectivityAssessment: NSObject, AssessmentDriver {
       wifiPathMonitor?.start(queue: wifiConnectionQueue)
       
       wifiPathMonitor?.pathUpdateHandler = { [weak self] path in
-        guard path.status == .satisfied && path.usesInterfaceType(.wifi) else { return }
+        guard path.usesInterfaceType(.wifi) else { return }
         
         self?.assessments[.wifi] = true
         completion?()

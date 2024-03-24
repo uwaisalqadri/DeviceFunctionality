@@ -36,6 +36,8 @@ class AssessmentPresenter: ObservableObject {
   
   func runningAssessment(for assessment: Assessment) {
     currentAssessment = (assessment, !assessment.testingMessage.isEmpty)
+    isAssessmentPassed = false
+    
     startAssessment(for: assessment)
       .receive(on: RunLoop.main)
       .sink(
@@ -74,7 +76,7 @@ class AssessmentPresenter: ObservableObject {
       case .rootStatus:
         promise(.success(self.deviceDriver.hasAssessmentPassed[assessment] ?? false))
         
-      case .volumeUp, .volumeDown, .silentSwitch, .biometric, .proximity, .accelerometer, .microphone:
+      case .volumeUp, .volumeDown, .biometric, .proximity, .accelerometer, .microphone:
         self.physicalDriver.startAssessment(for: assessment) {
           if let reason = self.physicalDriver.assessments[.biometric] as? BiometricFailedReason {
             promise(.failure(reason))
@@ -87,6 +89,12 @@ class AssessmentPresenter: ObservableObject {
           }
           
           promise(.success(self.physicalDriver.hasAssessmentPassed[assessment] ?? false))
+          self.physicalDriver.stopAssessment(for: assessment)
+        }
+      case .silentSwitch:
+        self.physicalDriver.startAssessment(for: assessment) {
+          promise(.success(self.physicalDriver.hasAssessmentPassed[assessment] ?? false))
+          self.physicalDriver.stopAssessment(for: assessment)
         }
       case .powerButton:
         NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)
@@ -108,6 +116,7 @@ class AssessmentPresenter: ObservableObject {
       case .sim, .wifi, .bluetooth, .gps:
         self.connectivityDriver.startAssessment(for: assessment) {
           promise(.success(self.connectivityDriver.hasAssessmentPassed[assessment] ?? false))
+          self.connectivityDriver.stopAssessment(for: assessment)
         }
         
       case .homeButton:
@@ -121,6 +130,7 @@ class AssessmentPresenter: ObservableObject {
       case .mainSpeaker, .earSpeaker, .vibration:
         self.physicalDriver.startAssessment(for: assessment) {
           promise(.success(true))
+          self.physicalDriver.stopAssessment(for: assessment)
         }
         
       case .deadpixel:
