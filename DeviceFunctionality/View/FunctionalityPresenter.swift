@@ -1,5 +1,5 @@
 //
-//  AssessmentPresenter.swift
+//  FunctionalityPresenter.swift
 //  DeviceAssessment
 //
 //  Created by Uwais Alqadri on 6/1/24.
@@ -11,10 +11,20 @@ import DeviceKit
 import AudioToolbox
 import Foundation
 
-class AssessmentPresenter: ObservableObject {
+class FunctionalityPresenter: ObservableObject {
   
   @Published var currentAssessment: (assessment: Assessment, isRunning: Bool) = (.cpu, false)
   @Published var isAssessmentPassed = false
+  
+  var allAssessments: [Assessment] {
+    Assessment.allCases
+//      .compactMap { item in
+//        if [.batteryStatus, .camera, .homeButton, .deadpixel, .touchscreen].contains(item) {
+//          return nil
+//        }
+//        return item
+//      }
+  }
   
   private var cancellables = Set<AnyCancellable>()
   
@@ -147,5 +157,30 @@ class AssessmentPresenter: ObservableObject {
       }
     }
     .eraseToAnyPublisher()
+  }
+}
+
+extension FunctionalityPresenter {
+  enum GridSide {
+    case right, left
+  }
+  
+  func splitForGrid(side: GridSide) -> [Assessment] {
+    var firstColumn: [Assessment] = []
+    var secondColumn: [Assessment] = []
+    
+    allAssessments.enumerated().forEach { index, item in
+      if index % 2 == 0 {
+        firstColumn.append(item)
+      } else {
+        secondColumn.append(item)
+      }
+    }
+    
+    if side == .right {
+      return firstColumn
+    } else {
+      return secondColumn
+    }
   }
 }

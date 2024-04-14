@@ -32,7 +32,7 @@
 		CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C78D42B4989B5003139E1 /* CommonUtils.swift */; };
 		CE8E5E852B49735B007EC804 /* Mute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E842B49735B007EC804 /* Mute.swift */; };
 		CE8E5E872B497390007EC804 /* mute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = CE8E5E862B497390007EC804 /* mute.aiff */; };
-		CE8E5E8C2B497FD5007EC804 /* AssessmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */; };
+		CE8E5E8C2B497FD5007EC804 /* FunctionalityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */; };
 		CE91C21D2B4E9DC700E1C413 /* FunctionalityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */; };
 		CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */; };
 		CEEE205D2BAC0C7300E74937 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = CEEE205C2BAC0C7300E74937 /* AlertToast */; };
@@ -76,7 +76,7 @@
 		CE8C78D42B4989B5003139E1 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		CE8E5E842B49735B007EC804 /* Mute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mute.swift; sourceTree = "<group>"; };
 		CE8E5E862B497390007EC804 /* mute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mute.aiff; sourceTree = "<group>"; };
-		CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentPresenter.swift; sourceTree = "<group>"; };
+		CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalityPresenter.swift; sourceTree = "<group>"; };
 		CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalityRow.swift; sourceTree = "<group>"; };
 		CEDF26602B4F98F100D8D675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerAssessment.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			children = (
 				CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */,
 				CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */,
-				CE8E5E8B2B497FD5007EC804 /* AssessmentPresenter.swift */,
+				CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */,
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
 				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
 				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
@@ -331,7 +331,7 @@
 				CE066E282BAB2BD1007C7014 /* PermissionFailed.swift in Sources */,
 				CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */,
 				CE066E262BAB2BC2007C7014 /* DeviceBasicInformation.swift in Sources */,
-				CE8E5E8C2B497FD5007EC804 /* AssessmentPresenter.swift in Sources */,
+				CE8E5E8C2B497FD5007EC804 /* FunctionalityPresenter.swift in Sources */,
 				CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */,
 				CE066E162BAB2B13007C7014 /* SpeechRecognizer.swift in Sources */,
 				CE066E1E2BAB2B8B007C7014 /* CpuInformation.swift in Sources */,
@@ -483,10 +483,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeviceFunctionality/Preview Content\"";
-				DEVELOPMENT_TEAM = 3X5NNQUKV6;
+				DEVELOPMENT_TEAM = SM8JGRFPQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceFunctionality/Info.plist;
@@ -507,8 +508,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functionality;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functional;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DeviceFunctionality/Core/DeviceFunctionality-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -524,10 +526,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeviceFunctionality/Preview Content\"";
-				DEVELOPMENT_TEAM = 3X5NNQUKV6;
+				DEVELOPMENT_TEAM = SM8JGRFPQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceFunctionality/Info.plist;
@@ -548,8 +551,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functionality;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functional;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DeviceFunctionality/Core/DeviceFunctionality-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

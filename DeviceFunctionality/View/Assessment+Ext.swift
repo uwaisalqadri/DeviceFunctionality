@@ -206,11 +206,11 @@ extension Assessment {
       case .homeButton:
           return "🏠 Home button is responsive!"
       case .mainSpeaker:
-          return "📻 Main speaker producing sound properly!"
+          return "📻 Speaker producing sound properly!"
       case .earSpeaker:
           return "🎧 Ear speaker functionality tested!"
       case .proximity:
-          return "⚠️ Proximity sensor functionality checked!"
+          return "⚠️ Proximity sensor worked!"
       case .deadpixel:
           return "💀 No dead pixels detected on the screen!"
       case .rotation:
@@ -241,13 +241,13 @@ extension Assessment {
     case .microphone:
       return "🎙️ Test microphone recording"
     case .earSpeaker:
-      return "🎧 Put you phone like a call to test ear speaker"
+      return "🎧 Put your phone like a call"
     case .mainSpeaker:
-      return "📻 Play a sound to test main speaker"
+      return "📻 Playing a sound..."
     case .vibration:
       return "🫨 Check if the device vibrates"
     case .proximity:
-      return "⚠️ Put your hand on the screen for Proximity!"
+      return "⚠️ Cover your screen"
     default:
       return ""
     }

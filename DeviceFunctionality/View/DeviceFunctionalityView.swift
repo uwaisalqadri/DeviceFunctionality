@@ -12,18 +12,14 @@ import AlertToast
 
 struct DeviceFunctionalityView: View {
   
-  @StateObject var presenter: AssessmentPresenter = AssessmentPresenter()
-  
-  var allAssessments: [Assessment] {
-    Assessment.allCases
-  }
-  
+  @StateObject var presenter: FunctionalityPresenter = FunctionalityPresenter()
+    
   var body: some View {
     NavigationView {
       ScrollView {
         HStack(alignment: .top) {
           VStack(spacing: 12) {
-            ForEach(Array(splitForGrid(items: allAssessments).rightGrid.enumerated()), id: \.offset) { _, item in
+            ForEach(Array(presenter.splitForGrid(side: .right).enumerated()), id: \.offset) { _, item in
               FunctionalityRow(item: item, onTestFunction: {
                 presenter.runningAssessment(for: item)
               })
@@ -32,7 +28,7 @@ struct DeviceFunctionalityView: View {
           }
           
           VStack(spacing: 12) {
-            ForEach(Array(splitForGrid(items: allAssessments).leftGrid.enumerated()), id: \.offset) { _, item in
+            ForEach(Array(presenter.splitForGrid(side: .left).enumerated()), id: \.offset) { _, item in
               FunctionalityRow(item: item, onTestFunction: {
                 presenter.runningAssessment(for: item)
               })
@@ -55,30 +51,8 @@ struct DeviceFunctionalityView: View {
   }
 }
 
-extension DeviceFunctionalityView {
-  struct SearchGrid: Equatable {
-    public var rightGrid: [Assessment] = []
-    public var leftGrid: [Assessment] = []
-  }
-  
-  func splitForGrid(items: [Assessment]) -> SearchGrid {
-    var firstColumn: [Assessment] = []
-    var secondColumn: [Assessment] = []
-    
-    items.enumerated().forEach { index, item in
-      if index % 2 == 0 {
-        firstColumn.append(item)
-      } else {
-        secondColumn.append(item)
-      }
-    }
-    
-    return SearchGrid(rightGrid: firstColumn, leftGrid: secondColumn)
-  }
-}
-
 struct DeviceFunctionalityView_Previews: PreviewProvider {
   static var previews: some View {
-    DeviceFunctionalityView(presenter: AssessmentPresenter())
+    DeviceFunctionalityView(presenter: FunctionalityPresenter())
   }
 }
