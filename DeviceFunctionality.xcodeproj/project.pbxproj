@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86985E292C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */; };
 		CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E132BAB2A7F007C7014 /* Assessment.swift */; };
 		CE066E162BAB2B13007C7014 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */; };
 		CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */; };
@@ -22,7 +23,7 @@
 		CE11C48A2BB1105700EC3028 /* Assessment+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */; };
 		CE40ADCA2B2BD4D300F76E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */; };
 		CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */; };
-		CE40ADCD2B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */; };
+		CE40ADCD2B2BD4D300F76E3C /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* MainApp.swift */; };
 		CE40ADCF2B2BD4D300F76E3C /* DeviceFunctionalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */; };
 		CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */; };
 		CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FunctionalityPresenter+StateAction.swift"; sourceTree = "<group>"; };
 		CE066E132BAB2A7F007C7014 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
 		CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeButtonHandler.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		CE40ADBA2B2BD4D300F76E3C /* DeviceFunctionality-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeviceFunctionality-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceFunctionalityAsessmentApp.swift; sourceTree = "<group>"; };
+		CE40ADC32B2BD4D300F76E3C /* MainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceFunctionalityView.swift; sourceTree = "<group>"; };
 		CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTester.swift; sourceTree = "<group>"; };
 		CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoAssessment.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86985E2C2C87072F00253A8A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE40ADC32B2BD4D300F76E3C /* MainApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		CE066E1A2BAB2B71007C7014 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,12 +131,12 @@
 		CE066E302BAB2E6D007C7014 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE40ADC32B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift */,
+				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
+				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
 				CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */,
 				CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */,
-				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
+				86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */,
 				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
-				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +144,7 @@
 		CE40ADB52B2BD4D300F76E3C /* DeviceFunctionality */ = {
 			isa = PBXGroup;
 			children = (
+				86985E2C2C87072F00253A8A /* App */,
 				CE066E302BAB2E6D007C7014 /* View */,
 				CE40ADD22B2BE5E800F76E3C /* Assessment */,
 				CEE4ADE62B382745007D54E9 /* Core */,
@@ -326,7 +337,7 @@
 				CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */,
 				CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
-				CE40ADCD2B2BD4D300F76E3C /* DeviceFunctionalityAsessmentApp.swift in Sources */,
+				CE40ADCD2B2BD4D300F76E3C /* MainApp.swift in Sources */,
 				CE91C21D2B4E9DC700E1C413 /* FunctionalityRow.swift in Sources */,
 				CE066E282BAB2BD1007C7014 /* PermissionFailed.swift in Sources */,
 				CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */,
@@ -339,6 +350,7 @@
 				CE066E242BAB2BB6007C7014 /* Device+Ext.swift in Sources */,
 				CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */,
 				CE066E202BAB2B98007C7014 /* Storage.swift in Sources */,
+				86985E292C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift in Sources */,
 				CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
