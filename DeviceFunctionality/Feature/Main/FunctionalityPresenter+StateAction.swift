@@ -11,6 +11,9 @@ extension FunctionalityPresenter {
   struct State {
     var currentAssessment: (assessment: Assessment, isRunning: Bool) = (.cpu, false)
     var isAssessmentPassed = false
+    var isTouchscreenPresented = false
+    var isCameraPresented = false
+    var isDeadpixelPresented = false
     var allAssessments: [Assessment] = Assessment.allCases
     
     var toastContents: (finished: String, testing: String) {
@@ -20,7 +23,8 @@ extension FunctionalityPresenter {
   }
   
   enum Action {
-    case didStart(assessment: Assessment)
+    case startAssessment(assessment: Assessment)
+    case shouldShow(assessment: Assessment, isPresented: Bool)
   }
 }
 

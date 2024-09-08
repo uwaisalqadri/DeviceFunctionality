@@ -24,12 +24,16 @@
 		CE40ADCA2B2BD4D300F76E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */; };
 		CE40ADCC2B2BD4D300F76E3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */; };
 		CE40ADCD2B2BD4D300F76E3C /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC32B2BD4D300F76E3C /* MainApp.swift */; };
-		CE40ADCF2B2BD4D300F76E3C /* DeviceFunctionalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */; };
+		CE40ADCF2B2BD4D300F76E3C /* FunctionalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADC52B2BD4D300F76E3C /* FunctionalityView.swift */; };
 		CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */; };
 		CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */; };
 		CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */; };
 		CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CCA6D2B39A0E100F28F2A /* PhysicalActivityAssessment.swift */; };
 		CE7592AC2BAB9DA300D59361 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7592AB2BAB9DA300D59361 /* SpeechSynthesizer.swift */; };
+		CE766A262C8DB56600B54877 /* ScreenFunctionalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A252C8DB56600B54877 /* ScreenFunctionalityView.swift */; };
+		CE766A282C8DB62700B54877 /* ScreenFunctionalityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A272C8DB62700B54877 /* ScreenFunctionalityPresenter.swift */; };
+		CE766A2A2C8DC5B100B54877 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A292C8DC5B100B54877 /* Notifications.swift */; };
+		CE766A2C2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A2B2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift */; };
 		CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C78D42B4989B5003139E1 /* CommonUtils.swift */; };
 		CE8E5E852B49735B007EC804 /* Mute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E842B49735B007EC804 /* Mute.swift */; };
 		CE8E5E872B497390007EC804 /* mute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = CE8E5E862B497390007EC804 /* mute.aiff */; };
@@ -64,23 +68,26 @@
 		CE066E292BAB2BF5007C7014 /* BiometricFailedReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricFailedReason.swift; sourceTree = "<group>"; };
 		CE066E2E2BAB2E16007C7014 /* BiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
 		CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assessment+Ext.swift"; sourceTree = "<group>"; };
-		CE40ADBA2B2BD4D300F76E3C /* DeviceFunctionality-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeviceFunctionality-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE40ADC22B2BD4D300F76E3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE40ADC32B2BD4D300F76E3C /* MainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
-		CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceFunctionalityView.swift; sourceTree = "<group>"; };
+		CE40ADC52B2BD4D300F76E3C /* FunctionalityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalityView.swift; sourceTree = "<group>"; };
 		CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTester.swift; sourceTree = "<group>"; };
 		CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoAssessment.swift; sourceTree = "<group>"; };
 		CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityAssessment.swift; sourceTree = "<group>"; };
 		CE5725912B294BE1000E4EC2 /* DeviceFunctionality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceFunctionality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CCA6D2B39A0E100F28F2A /* PhysicalActivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalActivityAssessment.swift; sourceTree = "<group>"; };
 		CE7592AB2BAB9DA300D59361 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
+		CE766A252C8DB56600B54877 /* ScreenFunctionalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFunctionalityView.swift; sourceTree = "<group>"; };
+		CE766A272C8DB62700B54877 /* ScreenFunctionalityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFunctionalityPresenter.swift; sourceTree = "<group>"; };
+		CE766A292C8DC5B100B54877 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		CE766A2B2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenFunctionalityPresenter+StateAction.swift"; sourceTree = "<group>"; };
 		CE8C78D42B4989B5003139E1 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		CE8E5E842B49735B007EC804 /* Mute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mute.swift; sourceTree = "<group>"; };
 		CE8E5E862B497390007EC804 /* mute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mute.aiff; sourceTree = "<group>"; };
 		CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalityPresenter.swift; sourceTree = "<group>"; };
 		CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalityRow.swift; sourceTree = "<group>"; };
-		CEDF26602B4F98F100D8D675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CEDF26602B4F98F100D8D675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerAssessment.swift; sourceTree = "<group>"; };
 		CEF9A2AD2B2B37B30034E06F /* DeviceFunctionalityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceFunctionalityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAutomaticAsessmentTests.swift; sourceTree = "<group>"; };
@@ -128,29 +135,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CE066E302BAB2E6D007C7014 /* View */ = {
+		CE066E302BAB2E6D007C7014 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
 				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
-				CE40ADC52B2BD4D300F76E3C /* DeviceFunctionalityView.swift */,
-				CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */,
-				86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */,
-				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
+				CE766A232C8DB43700B54877 /* Functional */,
+				CE766A222C8DB42000B54877 /* Main */,
+				CE766A292C8DC5B100B54877 /* Notifications.swift */,
 			);
-			path = View;
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		CE40ADB52B2BD4D300F76E3C /* DeviceFunctionality */ = {
 			isa = PBXGroup;
 			children = (
 				86985E2C2C87072F00253A8A /* App */,
-				CE066E302BAB2E6D007C7014 /* View */,
-				CE40ADD22B2BE5E800F76E3C /* Assessment */,
 				CEE4ADE62B382745007D54E9 /* Core */,
-				CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */,
-				CEDF26602B4F98F100D8D675 /* Info.plist */,
+				CE066E302BAB2E6D007C7014 /* Feature */,
 				CE40ADC12B2BD4D300F76E3C /* Preview Content */,
+				CE766A242C8DB46D00B54877 /* Resources */,
 			);
 			path = DeviceFunctionality;
 			sourceTree = "<group>";
@@ -194,12 +198,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CE766A222C8DB42000B54877 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */,
+				86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */,
+				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
+				CE40ADC52B2BD4D300F76E3C /* FunctionalityView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE766A232C8DB43700B54877 /* Functional */ = {
+			isa = PBXGroup;
+			children = (
+				CE766A252C8DB56600B54877 /* ScreenFunctionalityView.swift */,
+				CE766A272C8DB62700B54877 /* ScreenFunctionalityPresenter.swift */,
+				CE766A2B2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift */,
+			);
+			path = Functional;
+			sourceTree = "<group>";
+		};
+		CE766A242C8DB46D00B54877 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF26602B4F98F100D8D675 /* Info.plist */,
+				CE40ADBF2B2BD4D300F76E3C /* Assets.xcassets */,
+				CE8E5E862B497390007EC804 /* mute.aiff */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CEE4ADE62B382745007D54E9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CE40ADD22B2BE5E800F76E3C /* Assessment */,
 				CE066E1A2BAB2B71007C7014 /* Model */,
-				CE40ADBA2B2BD4D300F76E3C /* DeviceFunctionality-Bridging-Header.h */,
-				CE8E5E862B497390007EC804 /* mute.aiff */,
 				CE8E5E842B49735B007EC804 /* Mute.swift */,
 				CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */,
 				CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */,
@@ -330,15 +364,19 @@
 				CE7592AC2BAB9DA300D59361 /* SpeechSynthesizer.swift in Sources */,
 				CE11C48A2BB1105700EC3028 /* Assessment+Ext.swift in Sources */,
 				CE066E1C2BAB2B7E007C7014 /* Battery.swift in Sources */,
+				CE766A282C8DB62700B54877 /* ScreenFunctionalityPresenter.swift in Sources */,
 				CE8E5E852B49735B007EC804 /* Mute.swift in Sources */,
-				CE40ADCF2B2BD4D300F76E3C /* DeviceFunctionalityView.swift in Sources */,
+				CE40ADCF2B2BD4D300F76E3C /* FunctionalityView.swift in Sources */,
 				CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */,
 				CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */,
+				CE766A2A2C8DC5B100B54877 /* Notifications.swift in Sources */,
 				CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */,
+				CE766A262C8DB56600B54877 /* ScreenFunctionalityView.swift in Sources */,
 				CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
 				CE40ADCD2B2BD4D300F76E3C /* MainApp.swift in Sources */,
 				CE91C21D2B4E9DC700E1C413 /* FunctionalityRow.swift in Sources */,
+				CE766A2C2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift in Sources */,
 				CE066E282BAB2BD1007C7014 /* PermissionFailed.swift in Sources */,
 				CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */,
 				CE066E262BAB2BC2007C7014 /* DeviceBasicInformation.swift in Sources */,
@@ -502,7 +540,7 @@
 				DEVELOPMENT_TEAM = SM8JGRFPQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeviceFunctionality/Info.plist;
+				INFOPLIST_FILE = DeviceFunctionality/Resources/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
@@ -524,7 +562,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "DeviceFunctionality/Core/DeviceFunctionality-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,7 +583,7 @@
 				DEVELOPMENT_TEAM = SM8JGRFPQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeviceFunctionality/Info.plist;
+				INFOPLIST_FILE = DeviceFunctionality/Resources/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
@@ -567,7 +605,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "DeviceFunctionality/Core/DeviceFunctionality-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

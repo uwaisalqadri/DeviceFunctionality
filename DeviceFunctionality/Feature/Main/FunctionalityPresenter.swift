@@ -36,15 +36,29 @@ class FunctionalityPresenter: ObservableObject {
   
   func send(_ action: Action) {
     switch action {
-    case .didStart(let assessment):
+    case .startAssessment(let assessment):
       runningAssessment(for: assessment)
+
+    case let .shouldShow(assessment, isPresented):
+      switch assessment {
+      case .camera:
+        state.isCameraPresented = isPresented
+      case .deadpixel:
+        state.isDeadpixelPresented = isPresented
+      case .touchscreen:
+        state.isTouchscreenPresented = isPresented
+      default:
+        break
+      }
     }
   }
-    
+}
+
+extension FunctionalityPresenter {
   func runningAssessment(for assessment: Assessment) {
     state.currentAssessment = (assessment, !assessment.testingMessage.isEmpty)
     state.isAssessmentPassed = false
-    
+
     Task {
       for try await isAssessmentPassed in startAssessment(for: assessment) {
         self.state.currentAssessment = (assessment, false)
@@ -52,10 +66,7 @@ class FunctionalityPresenter: ObservableObject {
       }
     }
   }
-}
 
-extension FunctionalityPresenter {
-  
   @MainActor
   func startAssessment(for assessment: Assessment) ->  AsyncThrowingStream<Bool, Error> {
     return AsyncThrowingStream { continuation in
@@ -81,7 +92,7 @@ extension FunctionalityPresenter {
         continuation.yield(self.deviceDriver.hasAssessmentPassed[assessment] ?? false)
         
       case .volumeUp, .volumeDown, .biometric, .proximity, .accelerometer, .microphone:
-        self.physicalDriver.startAssessment(for: assessment) {
+        physicalDriver.startAssessment(for: assessment) {
           if let reason = self.physicalDriver.assessments[.biometric] as? BiometricFailedReason {
             continuation.finish(throwing: reason)
             return
@@ -96,7 +107,7 @@ extension FunctionalityPresenter {
           self.physicalDriver.stopAssessment(for: assessment)
         }
       case .silentSwitch:
-        self.physicalDriver.startAssessment(for: assessment) {
+        physicalDriver.startAssessment(for: assessment) {
           continuation.yield(self.physicalDriver.hasAssessmentPassed[assessment] ?? false)
           self.physicalDriver.stopAssessment(for: assessment)
         }
@@ -109,16 +120,27 @@ extension FunctionalityPresenter {
             UIScreen.main.brightness = newBrightness
             continuation.yield(abs(oldBrightness - newBrightness) > 0.001)
           }
-          .store(in: &self.cancellables)
+          .store(in: &cancellables)
         
       case .camera:
-        continuation.yield(true)
-        
+        NotificationCenter.default.publisher(for: Notifications.didCameraPassed)
+          .sink { notification in
+            guard let isPassed = notification.object as? Bool else { return }
+            continuation.yield(isPassed)
+          }
+          .store(in: &cancellables)
+
       case .touchscreen:
-        continuation.yield(true)
-        
+        NotificationCenter.default.publisher(for: Notifications.didTouchScreenPassed)
+          .sink { notification in
+            guard let isPassed = notification.object as? Bool else { return }
+            continuation.yield(isPassed)
+            self.send(.shouldShow(assessment: assessment, isPresented: false))
+          }
+          .store(in: &cancellables)
+
       case .sim, .wifi, .bluetooth, .gps:
-        self.connectivityDriver.startAssessment(for: assessment) {
+        connectivityDriver.startAssessment(for: assessment) {
           continuation.yield(self.connectivityDriver.hasAssessmentPassed[assessment] ?? false)
           self.connectivityDriver.stopAssessment(for: assessment)
         }
@@ -129,24 +151,29 @@ extension FunctionalityPresenter {
           .sink { isTriggered in
             continuation.yield(isTriggered)
           }
-          .store(in: &self.cancellables)
+          .store(in: &cancellables)
         
       case .mainSpeaker, .earSpeaker, .vibration:
-        self.physicalDriver.startAssessment(for: assessment) {
+        physicalDriver.startAssessment(for: assessment) {
           continuation.yield(true)
           self.physicalDriver.stopAssessment(for: assessment)
         }
         
       case .deadpixel:
-        continuation.yield(true)
-        
+        NotificationCenter.default.publisher(for: Notifications.didDeadpixelPassed)
+          .sink { notification in
+            guard let isPassed = notification.object as? Bool else { return }
+            continuation.yield(isPassed)
+          }
+          .store(in: &cancellables)
+
       case .rotation:
         NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)
           .map { _ in true }
           .sink { isTriggered in
             continuation.yield(isTriggered)
           }
-          .store(in: &self.cancellables)
+          .store(in: &cancellables)
         
       }
     }

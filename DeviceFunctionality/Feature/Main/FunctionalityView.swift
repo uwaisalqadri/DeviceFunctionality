@@ -1,5 +1,5 @@
 //
-//  DeviceFunctionalityView.swift
+//  FunctionalityView.swift
 //  SpecAsessment
 //
 //  Created by Uwais Alqadri on 13/12/23.
@@ -10,8 +10,8 @@ import DeviceKit
 import CoreMotion
 import AlertToast
 
-struct DeviceFunctionalityView: View {
-  
+struct FunctionalityView: View {
+
   @StateObject var presenter: FunctionalityPresenter
     
   init() {
@@ -24,21 +24,15 @@ struct DeviceFunctionalityView: View {
     NavigationView {
       ScrollView {
         HStack(alignment: .top) {
-          VStack(spacing: 12) {
-            ForEach(Array(presenter.splitForGrid(side: .right).enumerated()), id: \.offset) { _, item in
-              FunctionalityRow(item: item, onTestFunction: {
-                presenter.send(.didStart(assessment: item))
-              })
-              .padding(.horizontal, 3)
-            }
-          }
-          
-          VStack(spacing: 12) {
-            ForEach(Array(presenter.splitForGrid(side: .left).enumerated()), id: \.offset) { _, item in
-              FunctionalityRow(item: item, onTestFunction: {
-                presenter.send(.didStart(assessment: item))
-              })
-              .padding(.horizontal, 3)
+          ForEach([FunctionalityPresenter.GridSide.right, FunctionalityPresenter.GridSide.left], id: \.self) { side in
+            VStack(spacing: 12) {
+              ForEach(Array(presenter.splitForGrid(side: side).enumerated()), id: \.offset) { _, item in
+                FunctionalityRow(item: item, onTestFunction: {
+                  presenter.send(.startAssessment(assessment: item))
+                  presenter.send(.shouldShow(assessment: item, isPresented: true))
+                })
+                .padding(.horizontal, 3)
+              }
             }
           }
         }
@@ -47,6 +41,15 @@ struct DeviceFunctionalityView: View {
         .padding(.bottom, 40)
       }
       .navigationTitle("Device Health")
+    }
+    .fullScreenCover(isPresented: $presenter.state.isTouchscreenPresented) {
+      ScreenFunctionalityView()
+    }
+    .fullScreenCover(isPresented: $presenter.state.isCameraPresented) {
+      EmptyView()
+    }
+    .fullScreenCover(isPresented: $presenter.state.isDeadpixelPresented) {
+      EmptyView()
     }
     .toast(isPresenting: $presenter.state.isAssessmentPassed, duration: 3.4) {
       AlertToast(displayMode: .hud, type: .regular, title: presenter.state.toastContents.finished)
@@ -57,8 +60,8 @@ struct DeviceFunctionalityView: View {
   }
 }
 
-struct DeviceFunctionalityView_Previews: PreviewProvider {
+struct FunctionalityView_Previews: PreviewProvider {
   static var previews: some View {
-    DeviceFunctionalityView()
+    FunctionalityView()
   }
 }

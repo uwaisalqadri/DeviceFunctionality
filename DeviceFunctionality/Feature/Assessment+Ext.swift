@@ -196,7 +196,7 @@ extension Assessment {
       case .wifi:
           return "🛜 Wi-Fi connectivity tested!"
       case .biometric:
-          return "🪪 Biometric authentication working properly!"
+          return "🪪 Biometric working properly!"
       case .accelerometer:
           return "📏 Accelerometer sensor tested!"
       case .bluetooth:
