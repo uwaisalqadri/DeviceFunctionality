@@ -34,6 +34,9 @@
 		CE766A282C8DB62700B54877 /* ScreenFunctionalityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A272C8DB62700B54877 /* ScreenFunctionalityPresenter.swift */; };
 		CE766A2A2C8DC5B100B54877 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A292C8DC5B100B54877 /* Notifications.swift */; };
 		CE766A2C2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A2B2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift */; };
+		CE766A312C8DD9F600B54877 /* DeadpixelFunctionalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A302C8DD9F600B54877 /* DeadpixelFunctionalityView.swift */; };
+		CE766A332C8DDA3400B54877 /* DeadpixelFunctionalityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A322C8DDA3400B54877 /* DeadpixelFunctionalityPresenter.swift */; };
+		CE766A352C8DDA3C00B54877 /* DeadpixelFunctionalityPresenter+StateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766A342C8DDA3C00B54877 /* DeadpixelFunctionalityPresenter+StateAction.swift */; };
 		CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C78D42B4989B5003139E1 /* CommonUtils.swift */; };
 		CE8E5E852B49735B007EC804 /* Mute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E5E842B49735B007EC804 /* Mute.swift */; };
 		CE8E5E872B497390007EC804 /* mute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = CE8E5E862B497390007EC804 /* mute.aiff */; };
@@ -82,6 +85,9 @@
 		CE766A272C8DB62700B54877 /* ScreenFunctionalityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFunctionalityPresenter.swift; sourceTree = "<group>"; };
 		CE766A292C8DC5B100B54877 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		CE766A2B2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenFunctionalityPresenter+StateAction.swift"; sourceTree = "<group>"; };
+		CE766A302C8DD9F600B54877 /* DeadpixelFunctionalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadpixelFunctionalityView.swift; sourceTree = "<group>"; };
+		CE766A322C8DDA3400B54877 /* DeadpixelFunctionalityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadpixelFunctionalityPresenter.swift; sourceTree = "<group>"; };
+		CE766A342C8DDA3C00B54877 /* DeadpixelFunctionalityPresenter+StateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeadpixelFunctionalityPresenter+StateAction.swift"; sourceTree = "<group>"; };
 		CE8C78D42B4989B5003139E1 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		CE8E5E842B49735B007EC804 /* Mute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mute.swift; sourceTree = "<group>"; };
 		CE8E5E862B497390007EC804 /* mute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mute.aiff; sourceTree = "<group>"; };
@@ -138,11 +144,11 @@
 		CE066E302BAB2E6D007C7014 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
-				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
-				CE766A232C8DB43700B54877 /* Functional */,
-				CE766A222C8DB42000B54877 /* Main */,
-				CE766A292C8DC5B100B54877 /* Notifications.swift */,
+				CE766A2F2C8DD9B900B54877 /* Deadpixel */,
+				CE766A2E2C8DD9B000B54877 /* Camera */,
+				CE766A222C8DB42000B54877 /* Functional */,
+				CE766A232C8DB43700B54877 /* Screen */,
+				CE766A2D2C8DD99300B54877 /* Utils */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -198,7 +204,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE766A222C8DB42000B54877 /* Main */ = {
+		CE766A222C8DB42000B54877 /* Functional */ = {
 			isa = PBXGroup;
 			children = (
 				CE8E5E8B2B497FD5007EC804 /* FunctionalityPresenter.swift */,
@@ -206,17 +212,17 @@
 				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
 				CE40ADC52B2BD4D300F76E3C /* FunctionalityView.swift */,
 			);
-			path = Main;
+			path = Functional;
 			sourceTree = "<group>";
 		};
-		CE766A232C8DB43700B54877 /* Functional */ = {
+		CE766A232C8DB43700B54877 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				CE766A252C8DB56600B54877 /* ScreenFunctionalityView.swift */,
 				CE766A272C8DB62700B54877 /* ScreenFunctionalityPresenter.swift */,
 				CE766A2B2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift */,
 			);
-			path = Functional;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		CE766A242C8DB46D00B54877 /* Resources */ = {
@@ -227,6 +233,33 @@
 				CE8E5E862B497390007EC804 /* mute.aiff */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE766A2D2C8DD99300B54877 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
+				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
+				CE766A292C8DC5B100B54877 /* Notifications.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE766A2E2C8DD9B000B54877 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		CE766A2F2C8DD9B900B54877 /* Deadpixel */ = {
+			isa = PBXGroup;
+			children = (
+				CE766A302C8DD9F600B54877 /* DeadpixelFunctionalityView.swift */,
+				CE766A322C8DDA3400B54877 /* DeadpixelFunctionalityPresenter.swift */,
+				CE766A342C8DDA3C00B54877 /* DeadpixelFunctionalityPresenter+StateAction.swift */,
+			);
+			path = Deadpixel;
 			sourceTree = "<group>";
 		};
 		CEE4ADE62B382745007D54E9 /* Core */ = {
@@ -368,6 +401,7 @@
 				CE8E5E852B49735B007EC804 /* Mute.swift in Sources */,
 				CE40ADCF2B2BD4D300F76E3C /* FunctionalityView.swift in Sources */,
 				CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */,
+				CE766A352C8DDA3C00B54877 /* DeadpixelFunctionalityPresenter+StateAction.swift in Sources */,
 				CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */,
 				CE766A2A2C8DC5B100B54877 /* Notifications.swift in Sources */,
 				CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */,
@@ -384,7 +418,9 @@
 				CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */,
 				CE066E162BAB2B13007C7014 /* SpeechRecognizer.swift in Sources */,
 				CE066E1E2BAB2B8B007C7014 /* CpuInformation.swift in Sources */,
+				CE766A332C8DDA3400B54877 /* DeadpixelFunctionalityPresenter.swift in Sources */,
 				CE066E2A2BAB2BF5007C7014 /* BiometricFailedReason.swift in Sources */,
+				CE766A312C8DD9F600B54877 /* DeadpixelFunctionalityView.swift in Sources */,
 				CE066E242BAB2BB6007C7014 /* Device+Ext.swift in Sources */,
 				CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */,
 				CE066E202BAB2B98007C7014 /* Storage.swift in Sources */,

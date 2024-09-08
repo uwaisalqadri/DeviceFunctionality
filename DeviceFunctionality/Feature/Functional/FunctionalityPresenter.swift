@@ -127,6 +127,7 @@ extension FunctionalityPresenter {
           .sink { notification in
             guard let isPassed = notification.object as? Bool else { return }
             continuation.yield(isPassed)
+            self.send(.shouldShow(assessment: assessment, isPresented: false))
           }
           .store(in: &cancellables)
 
@@ -164,6 +165,7 @@ extension FunctionalityPresenter {
           .sink { notification in
             guard let isPassed = notification.object as? Bool else { return }
             continuation.yield(isPassed)
+            self.send(.shouldShow(assessment: assessment, isPresented: false))
           }
           .store(in: &cancellables)
 

@@ -49,7 +49,7 @@ struct FunctionalityView: View {
       EmptyView()
     }
     .fullScreenCover(isPresented: $presenter.state.isDeadpixelPresented) {
-      EmptyView()
+      DeadpixelFunctionalityView()
     }
     .toast(isPresenting: $presenter.state.isAssessmentPassed, duration: 3.4) {
       AlertToast(displayMode: .hud, type: .regular, title: presenter.state.toastContents.finished)
