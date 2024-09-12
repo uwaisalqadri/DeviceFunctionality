@@ -14,6 +14,8 @@ extension FunctionalityPresenter {
     var isTouchscreenPresented = false
     var isCameraPresented = false
     var isDeadpixelPresented = false
+    var isSerialRunning = false
+    var isConfirmSerial = false
     var allAssessments: [Assessment] = Assessment.allCases
     
     var toastContents: (finished: String, testing: String) {
@@ -23,14 +25,16 @@ extension FunctionalityPresenter {
   }
   
   enum Action {
-    case startAssessment(assessment: Assessment)
+    case start(assessment: Assessment)
+    case confirmSerial
+    case runSerial
     case shouldShow(assessment: Assessment, isPresented: Bool)
   }
 }
 
 
 extension FunctionalityPresenter {
-  enum GridSide {
+  enum GridSide: CaseIterable {
     case right, left
   }
   

@@ -32,4 +32,35 @@ public enum Assessment: CaseIterable, Codable {
   case deadpixel
   case rotation
   case microphone
+
+  public static var allCases: [Assessment] {
+    let allCases: [Assessment] = [
+      .cpu,
+      .storage,
+//      .batteryStatus,
+      .rootStatus,
+      .silentSwitch,
+      .volumeUp,
+      .volumeDown,
+      .powerButton,
+      .vibration,
+//      .camera,
+//      .touchscreen,
+//      .sim,
+      .wifi,
+      .biometric,
+      .accelerometer,
+      .bluetooth,
+      .gps,
+//      .homeButton,
+      .mainSpeaker,
+      .earSpeaker,
+      .proximity,
+//      .deadpixel,
+      .rotation,
+      .microphone,
+    ]
+
+    return allCases
+  }
 }
