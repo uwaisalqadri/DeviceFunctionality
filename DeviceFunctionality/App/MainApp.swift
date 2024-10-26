@@ -10,9 +10,13 @@ import CoreMotion
 
 @main
 struct MainApp: App {
+  
+  @AppStorage("isDarkMode") var isDarkMode: Bool = false
+  
   var body: some Scene {
     WindowGroup {
       FunctionalityView()
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
   }
 }

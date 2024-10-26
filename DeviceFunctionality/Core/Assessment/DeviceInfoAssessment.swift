@@ -55,9 +55,9 @@ public class DeviceInfoAssessment: AssessmentDriver {
         self.assessments[.storage] = Storage(
           readSpeed: "\(readSpeed) MB/s",
           writeSpeed: "\(writeSpeed) MB/s",
-          remainingSpace: "\(device.freeDiskSpaceInBytes.toGBFormat().replacingOccurrences(of: " GB", with: ""))",
-          usedSpace: "\(device.usedDiskSpaceInBytes.toGBFormat().replacingOccurrences(of: " GB", with: ""))",
-          int32: UInt32(device.totalDiskSpaceInBytes.toGBFormat().replacingOccurrences(of: " GB", with: "")),
+          remainingSpace: device.freeDiskSpaceInBytes.toGBFormat(),
+          usedSpace: device.usedDiskSpaceInBytes.toGBFormat(),
+          int32: UInt32(device.totalDiskSpaceInBytes.toGBFormat()),
           totalSpace: device.totalDiskSpaceInBytes.toGBFormat(),
           totalRAM: Int64(processInfo.physicalMemory).toGBFormat()
         )

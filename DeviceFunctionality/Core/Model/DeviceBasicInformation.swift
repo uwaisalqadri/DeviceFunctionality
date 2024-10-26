@@ -15,7 +15,13 @@ public struct DeviceBasicInformation {
   public var ram: String
   public var isNotJailBroken: Bool
   
-  public init(marketingName: String, modelName: String, variant: String, ram: String, isNotJailBroken: Bool) {
+  public init(
+    marketingName: String,
+    modelName: String,
+    variant: String,
+    ram: String,
+    isNotJailBroken: Bool
+  ) {
     self.marketingName = marketingName
     self.modelName = modelName
     self.variant = variant

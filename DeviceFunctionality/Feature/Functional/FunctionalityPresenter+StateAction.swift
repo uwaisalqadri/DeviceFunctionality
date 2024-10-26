@@ -17,6 +17,7 @@ extension FunctionalityPresenter {
     var isSerialRunning = false
     var isConfirmSerial = false
     var allAssessments: [Assessment] = Assessment.allCases
+    var passedAssessments: [Assessment: Bool] = [:]
     
     var toastContents: (finished: String, testing: String) {
       let assessment = currentAssessment.assessment

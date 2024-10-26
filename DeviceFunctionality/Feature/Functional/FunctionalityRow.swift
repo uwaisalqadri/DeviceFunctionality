@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FunctionalityRow: View {
   let item: Assessment
+  var isPassed: Bool
   
   var onTestFunction: (() -> Void)?
   
@@ -17,23 +18,32 @@ struct FunctionalityRow: View {
       UIImpactFeedbackGenerator().impactOccurred()
       onTestFunction?()
     }) {
-      VStack(alignment: .leading, spacing: 0) {
-        Text(item.icon)
-          .font(.system(size: 30))
-          .frame(maxWidth: .infinity, alignment: .leading)
+      ZStack(alignment: .topTrailing) {
+        VStack(alignment: .leading, spacing: 0) {
+          Text(item.icon)
+            .font(.system(size: 30))
+            .frame(maxWidth: .infinity, alignment: .leading)
+          
+          Spacer()
+          
+          Text(item.title)
+            .bold()
+            .padding(.top, 16)
+          
+          Text(item.value)
+            .font(.system(size: 14))
+            .padding(.top, 3)
+            .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(height: 130)
         
-        Spacer()
-        
-        Text(item.title)
-          .bold()
-          .padding(.top, 16)
-        
-        Text(item.value)
-          .font(.system(size: 14))
-          .padding(.top, 3)
-          .fixedSize(horizontal: false, vertical: true)
+        if isPassed {
+          Image(systemName: "checkmark.circle.fill")
+            .resizable()
+            .frame(width: 20, height: 20)
+            .foregroundColor(.green)
+        }
       }
-      .frame(height: 130)
       .padding(14)
       .background(
         RoundedRectangle(cornerRadius: 12)
@@ -44,6 +54,6 @@ struct FunctionalityRow: View {
 }
 
 #Preview {
-  FunctionalityRow(item: .batteryStatus)
+  FunctionalityRow(item: .batteryStatus, isPassed: false)
     .frame(width: 200)
 }

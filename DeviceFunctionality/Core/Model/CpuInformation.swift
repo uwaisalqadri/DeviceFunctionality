@@ -13,7 +13,12 @@ public struct CpuInformation {
   public var architecture: String?
   public var frequency: String?
   
-  public init(model: String? = nil, coreCount: Int? = nil, architecture: String? = nil, frequency: String? = nil) {
+  public init(
+    model: String? = nil,
+    coreCount: Int? = nil,
+    architecture: String? = nil,
+    frequency: String? = nil
+  ) {
     self.model = model
     self.coreCount = coreCount
     self.architecture = architecture

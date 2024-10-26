@@ -13,7 +13,14 @@ public struct Battery {
   public var health: String?
   public var temperature: String?
   
-  public init(voltage: String? = nil, technology: String? = nil, replacementStatus: String? = nil, status: String? = nil, health: String? = nil, temperature: String? = nil) {
+  public init(
+    voltage: String? = nil,
+    technology: String? = nil,
+    replacementStatus: String? = nil,
+    status: String? = nil,
+    health: String? = nil,
+    temperature: String? = nil
+  ) {
     self.voltage = voltage
     self.technology = technology
     self.replacementStatus = replacementStatus

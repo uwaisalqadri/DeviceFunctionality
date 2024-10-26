@@ -76,6 +76,7 @@ extension FunctionalityPresenter {
       for try await isAssessmentPassed in streamAssessment(for: assessment) {
         self.state.currentAssessment = (assessment, false)
         self.state.isAssessmentPassed = isAssessmentPassed
+        self.state.passedAssessments[assessment] = true
       }
     } catch {
       print("Assessment failed for \(assessment): \(error)")

@@ -16,7 +16,15 @@ public struct Storage {
   public var totalSpace: String?
   public var totalRAM: String?
   
-  public init(readSpeed: String? = nil, writeSpeed: String? = nil, remainingSpace: String? = nil, usedSpace: String? = nil, int32: UInt32? = nil, totalSpace: String? = nil, totalRAM: String? = nil) {
+  public init(
+    readSpeed: String? = nil,
+    writeSpeed: String? = nil,
+    remainingSpace: String? = nil,
+    usedSpace: String? = nil,
+    int32: UInt32? = nil,
+    totalSpace: String? = nil,
+    totalRAM: String? = nil
+  ) {
     self.readSpeed = readSpeed
     self.writeSpeed = writeSpeed
     self.remainingSpace = remainingSpace
