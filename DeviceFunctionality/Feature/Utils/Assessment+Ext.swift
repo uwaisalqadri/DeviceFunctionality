@@ -11,53 +11,59 @@ extension Assessment {
   var icon: String {
     switch self {
     case .cpu:
-      return "📱"
+      return "cpu"
     case .storage:
-      return "🫙"
+      return "internaldrive"
     case .batteryStatus:
-      return "🔋"
+      return "battery.100"
     case .rootStatus:
-      return "🔏"
+      return "lock.shield"
     case .silentSwitch:
-      return "🔕"
+      return "bell.slash"
     case .volumeUp:
-      return "🔊"
+      return "speaker.wave.3.fill"
     case .volumeDown:
-      return "🔈"
+      return "speaker.wave.1"
     case .powerButton:
-      return "📵"
+      return "power"
     case .vibration:
-      return "🫨"
+      return "waveform.path.ecg"
     case .camera:
-      return "📸"
+      return "camera"
     case .touchscreen:
-      return "👆"
+      return "hand.point.up.left"
     case .sim:
-      return "📶"
+      return "simcard"
     case .wifi:
-      return "🛜"
+      return "wifi"
     case .biometric:
-      return "🪪"
+      return "faceid"
     case .accelerometer:
-      return "📏"
+      return "gyroscope"
     case .bluetooth:
-      return "🚹"
+      return "dot.radiowaves.right"
     case .gps:
-      return "🌐"
+      return "location"
     case .homeButton:
-      return "🏠"
+      return "house"
     case .mainSpeaker:
-      return "📻"
+      return "speaker.3.fill"
     case .earSpeaker:
-      return "🎧"
+      return "ear"
     case .proximity:
-      return "⚠️"
+      return "sensor.tag.radiowaves.forward"
     case .deadpixel:
-      return "💀"
+      return "eye.slash"
     case .rotation:
-      return "🔄"
+      return "rotate.right"
     case .microphone:
-      return "🎙️"
+      return "mic.fill"
+    case .multitouch:
+      return "hand.raised.fill"
+    case .barometer:
+      return "speedometer"
+    case .compass:
+      return "location.north.line.fill"
     }
   }
   
@@ -111,6 +117,12 @@ extension Assessment {
       return "Rotation"
     case .microphone:
       return "Microphone"
+    case .multitouch:
+      return "Multi Touch"
+    case .barometer:
+      return "Barometer"
+    case .compass:
+      return "Compass"
     }
   }
   
@@ -164,94 +176,105 @@ extension Assessment {
       return "Verify if the screen rotation feature is working"
     case .microphone:
       return "Test the microphone's recording capability"
+    case .multitouch:
+      return "Check the functionality of multi-touch gestures on your device"
+    case .barometer:
+      return "Test the barometer sensor for pressure measurement"
+    case .compass:
+      return "Verify the compass accuracy and functionality"
     }
   }
   
   var finishedMessage: String {
-      switch self {
-      case .cpu:
-          return "📱 CPU is healthy!"
-      case .storage:
-          return "🫙 Storage is safe!"
-      case .batteryStatus:
-          return "🔋 Battery is healthy!"
-      case .rootStatus:
-          return "🔏 Root status verified!"
-      case .silentSwitch:
-          return "🔕 Silent Switch worked!"
-      case .volumeUp:
-          return "🔊 Volume up button is responsive!"
-      case .volumeDown:
-          return "🔈 Volume down button is responsive!"
-      case .powerButton:
-          return "📵 Power button is functioning properly!"
-      case .vibration:
-          return "🫨 Vibration motor is working correctly!"
-      case .camera:
-          return "📸 Camera functionality is intact!"
-      case .touchscreen:
-          return "👆 Touch screen is responsive!"
-      case .sim:
-          return "📶 SIM card status verified!"
-      case .wifi:
-          return "🛜 Wi-Fi connectivity tested!"
-      case .biometric:
-          return "🪪 Biometric working properly!"
-      case .accelerometer:
-          return "📏 Accelerometer sensor tested!"
-      case .bluetooth:
-          return "🚹 Bluetooth connectivity verified!"
-      case .gps:
-          return "🌐 GPS functionality checked!"
-      case .homeButton:
-          return "🏠 Home button is responsive!"
-      case .mainSpeaker:
-          return "📻 Speaker producing sound properly!"
-      case .earSpeaker:
-          return "🎧 Ear speaker functionality tested!"
-      case .proximity:
-          return "⚠️ Proximity sensor worked!"
-      case .deadpixel:
-          return "💀 No dead pixels detected on the screen!"
-      case .rotation:
-          return "🔄 Screen rotation feature verified!"
-      case .microphone:
-          return "🎙️ Microphone recording capability tested!"
-      }
+    switch self {
+    case .cpu:
+      return "CPU is healthy!"
+    case .storage:
+      return "Storage is safe!"
+    case .batteryStatus:
+      return "Battery is healthy!"
+    case .rootStatus:
+      return "Root status verified!"
+    case .silentSwitch:
+      return "Silent Switch worked!"
+    case .volumeUp:
+      return "Volume up button is responsive!"
+    case .volumeDown:
+      return "Volume down button is responsive!"
+    case .powerButton:
+      return "Power button is functioning properly!"
+    case .vibration:
+      return "Vibration motor is working correctly!"
+    case .camera:
+      return "Camera functionality is intact!"
+    case .touchscreen:
+      return "Touch screen is responsive!"
+    case .sim:
+      return "SIM card status verified!"
+    case .wifi:
+      return "Wi-Fi connectivity tested!"
+    case .biometric:
+      return "Biometric working properly!"
+    case .accelerometer:
+      return "Accelerometer sensor tested!"
+    case .bluetooth:
+      return "Bluetooth connectivity verified!"
+    case .gps:
+      return "GPS functionality checked!"
+    case .homeButton:
+      return "Home button is responsive!"
+    case .mainSpeaker:
+      return "Speaker producing sound properly!"
+    case .earSpeaker:
+      return "Ear speaker functionality tested!"
+    case .proximity:
+      return "Proximity sensor worked!"
+    case .deadpixel:
+      return "No dead pixels detected on the screen!"
+    case .rotation:
+      return "Screen rotation feature verified!"
+    case .microphone:
+      return "Microphone recording capability tested!"
+    case .multitouch:
+      return "Multi-touch gestures are responsive!"
+    case .barometer:
+      return "Barometer sensor is functioning well!"
+    case .compass:
+      return "Compass is calibrated and accurate!"
+    }
   }
   
   var testingMessage: String {
     switch self {
     case .silentSwitch:
-      return "🔕 Turn On/Off the silent switch"
+      return "Turn On/Off the silent switch"
     case .volumeUp:
-      return "🔊 Press the volume up button"
+      return "Press the volume up button"
     case .volumeDown:
-      return "🔈 Press the volume down button"
+      return "Press the volume down button"
     case .powerButton:
-      return "📵 Press the power button"
+      return "Press the power button"
     case .wifi:
-      return "🛜 Connect to a Wi-Fi network"
+      return "Connect to a Wi-Fi network"
     case .sim:
-      return "📶 Turn On Celullar"
+      return "Turn On Cellular"
     case .bluetooth:
-      return "🚹 Turn On/Off Bluetooth"
+      return "Turn On/Off Bluetooth"
     case .gps:
-      return "🌐 Check GPS signal"
+      return "Check GPS signal"
     case .microphone:
-      return "🎙️ Test microphone recording"
+      return "Test microphone recording"
     case .earSpeaker:
-      return "🎧 Put your phone like a call"
+      return "Put your phone like a call"
     case .mainSpeaker:
-      return "📻 Playing a sound..."
+      return "Playing a sound..."
     case .vibration:
-      return "🫨 Check if the device vibrates"
+      return "Check if the device vibrates"
     case .proximity:
-      return "⚠️ Cover your screen"
+      return "Cover your screen"
     default:
       return ""
     }
   }
-
-
+  
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		86985E292C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */; };
+		919632EB2CCD6CF300B84F3C /* SpecificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919632EA2CCD6CF300B84F3C /* SpecificationView.swift */; };
 		CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E132BAB2A7F007C7014 /* Assessment.swift */; };
 		CE066E162BAB2B13007C7014 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */; };
 		CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FunctionalityPresenter+StateAction.swift"; sourceTree = "<group>"; };
+		919632EA2CCD6CF300B84F3C /* SpecificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationView.swift; sourceTree = "<group>"; };
 		CE066E132BAB2A7F007C7014 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
 		CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeButtonHandler.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		919632E92CCD6CE300B84F3C /* Specification */ = {
+			isa = PBXGroup;
+			children = (
+				919632EA2CCD6CF300B84F3C /* SpecificationView.swift */,
+			);
+			path = Specification;
+			sourceTree = "<group>";
+		};
 		CE066E1A2BAB2B71007C7014 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 				CE766A2F2C8DD9B900B54877 /* Deadpixel */,
 				CE766A222C8DB42000B54877 /* Functional */,
 				CE766A232C8DB43700B54877 /* Screen */,
+				919632E92CCD6CE300B84F3C /* Specification */,
 				CE766A2D2C8DD99300B54877 /* Utils */,
 			);
 			path = Feature;
@@ -400,6 +411,7 @@
 				CE766A262C8DB56600B54877 /* ScreenFunctionalityView.swift in Sources */,
 				CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */,
 				CE40ADD42B2BE60000F76E3C /* DeviceInfoAssessment.swift in Sources */,
+				919632EB2CCD6CF300B84F3C /* SpecificationView.swift in Sources */,
 				CE40ADCD2B2BD4D300F76E3C /* MainApp.swift in Sources */,
 				CE91C21D2B4E9DC700E1C413 /* FunctionalityRow.swift in Sources */,
 				CE766A2C2C8DCAE400B54877 /* ScreenFunctionalityPresenter+StateAction.swift in Sources */,

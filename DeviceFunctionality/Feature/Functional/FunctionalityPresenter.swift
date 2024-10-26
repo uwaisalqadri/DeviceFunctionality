@@ -27,7 +27,10 @@ class FunctionalityPresenter: ObservableObject {
 
   func send(_ action: Action) {
     switch action {
-    case .start(let assessment):
+    case .loadStatus:
+      loadDeviceStatus()
+      
+    case let .start(assessment):
       Task {
         await beginAssessment(for: assessment)
       }
@@ -36,8 +39,14 @@ class FunctionalityPresenter: ObservableObject {
       state.isConfirmSerial.toggle()
 
     case .runSerial:
-      startAssessmentsSerialized()
-
+      Task {
+        await startAssessmentsSerialized()
+      }
+      
+    case .terminateSerial:
+      cancellables.removeAll()
+      state.isSerialRunning = false
+      
     case let .shouldShow(assessment, isPresented):
       switch assessment {
       case .camera:
@@ -54,18 +63,16 @@ class FunctionalityPresenter: ObservableObject {
 }
 
 extension FunctionalityPresenter {
-  func startAssessmentsSerialized() {
+  func startAssessmentsSerialized() async {
     state.isSerialRunning = true
     let assessments = Assessment.allCases
 
-    Task {
-      for assessment in assessments {
-        await self.beginAssessment(for: assessment, isSerial: true)
-        send(.shouldShow(assessment: assessment, isPresented: true))
-      }
-
-      state.isSerialRunning = false
+    for assessment in assessments {
+      await beginAssessment(for: assessment, isSerial: true)
+      send(.shouldShow(assessment: assessment, isPresented: true))
     }
+
+    state.isSerialRunning = false
   }
 
   func beginAssessment(for assessment: Assessment, isSerial: Bool = false) async {
@@ -74,9 +81,9 @@ extension FunctionalityPresenter {
 
     do {
       for try await isAssessmentPassed in streamAssessment(for: assessment) {
-        self.state.currentAssessment = (assessment, false)
-        self.state.isAssessmentPassed = isAssessmentPassed
-        self.state.passedAssessments[assessment] = true
+        state.currentAssessment = (assessment, false)
+        state.isAssessmentPassed = isAssessmentPassed
+        state.passedAssessments[assessment] = true
       }
     } catch {
       print("Assessment failed for \(assessment): \(error)")
@@ -215,6 +222,34 @@ extension FunctionalityPresenter {
           }
           .store(in: &cancellables)
 
+      case .multitouch:
+        break
+        
+      case .barometer:
+        break
+        
+      case .compass:
+        break
+      }
+    }
+  }
+  
+  private func loadDeviceStatus() {
+    if let cpu = drivers[.deviceInfo]?.assessments[.cpu] as? CpuInformation {
+      state.deviceStatuses.append(.init(.cpu, value: cpu.frequency ?? "-"))
+    }
+    
+    drivers[.deviceInfo]?.startAssessment(for: .storage) { [drivers] in
+      if let storage = drivers[.deviceInfo]?.assessments[.storage] as? Storage {
+        self.state.deviceStatuses.append(.init(.memory, value: storage.totalRAM ?? "-"))
+        self.state.deviceStatuses.append(.init(.storage, value: storage.remainingSpace ?? "-"))
+      }
+    }
+    
+    drivers[.power]?.startAssessment(for: .batteryStatus) { [drivers] in
+      if let battery = drivers[.power]?.assessments[.batteryStatus] as? Battery {
+        self.state.deviceStatuses.append(.init(.battery, value: battery.percentage ?? "-"))
+        self.state.deviceStatuses.append(.init(.other, value: "Others"))
       }
     }
   }

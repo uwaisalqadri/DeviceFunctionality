@@ -19,12 +19,15 @@ public enum Assessment: CaseIterable, Codable {
   case vibration
   case camera
   case touchscreen
+  case multitouch
   case sim
   case wifi
   case biometric
   case accelerometer
+  case barometer
   case bluetooth
   case gps
+  case compass
   case homeButton
   case mainSpeaker
   case earSpeaker
@@ -37,7 +40,7 @@ public enum Assessment: CaseIterable, Codable {
     let allCases: [Assessment] = [
       .cpu,
       .storage,
-//      .batteryStatus,
+      .batteryStatus,
       .rootStatus,
       .silentSwitch,
       .volumeUp,
@@ -45,8 +48,8 @@ public enum Assessment: CaseIterable, Codable {
       .powerButton,
       .vibration,
 //      .camera,
-//      .touchscreen,
-//      .sim,
+      .touchscreen,
+      .sim,
       .wifi,
       .biometric,
       .accelerometer,
@@ -56,7 +59,7 @@ public enum Assessment: CaseIterable, Codable {
       .mainSpeaker,
       .earSpeaker,
       .proximity,
-//      .deadpixel,
+      .deadpixel,
       .rotation,
       .microphone,
     ]

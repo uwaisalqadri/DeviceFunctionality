@@ -20,9 +20,10 @@ struct FunctionalityRow: View {
     }) {
       ZStack(alignment: .topTrailing) {
         VStack(alignment: .leading, spacing: 0) {
-          Text(item.icon)
+          Image(systemName: item.icon)
             .font(.system(size: 30))
             .frame(maxWidth: .infinity, alignment: .leading)
+            .foregroundColor(.blue.opacity(0.8))
           
           Spacer()
           
