@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		86985E292C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */; };
 		919632EB2CCD6CF300B84F3C /* SpecificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919632EA2CCD6CF300B84F3C /* SpecificationView.swift */; };
+		919632EF2CCD714D00B84F3C /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919632EE2CCD714D00B84F3C /* IntroductionView.swift */; };
+		919632F12CCD73C000B84F3C /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919632F02CCD73C000B84F3C /* Bundle.swift */; };
 		CE066E142BAB2A7F007C7014 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E132BAB2A7F007C7014 /* Assessment.swift */; };
 		CE066E162BAB2B13007C7014 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */; };
 		CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FunctionalityPresenter+StateAction.swift"; sourceTree = "<group>"; };
 		919632EA2CCD6CF300B84F3C /* SpecificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationView.swift; sourceTree = "<group>"; };
+		919632EE2CCD714D00B84F3C /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		919632F02CCD73C000B84F3C /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		CE066E132BAB2A7F007C7014 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
 		CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeButtonHandler.swift; sourceTree = "<group>"; };
@@ -80,7 +84,7 @@
 		CE40ADD02B2BDB8700F76E3C /* AssessmentTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTester.swift; sourceTree = "<group>"; };
 		CE40ADD32B2BE60000F76E3C /* DeviceInfoAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoAssessment.swift; sourceTree = "<group>"; };
 		CE40ADD52B2BE61D00F76E3C /* ConnectivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityAssessment.swift; sourceTree = "<group>"; };
-		CE5725912B294BE1000E4EC2 /* DeviceFunctionality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceFunctionality.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5725912B294BE1000E4EC2 /* inOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CCA6D2B39A0E100F28F2A /* PhysicalActivityAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalActivityAssessment.swift; sourceTree = "<group>"; };
 		CE7592AB2BAB9DA300D59361 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		CE766A252C8DB56600B54877 /* ScreenFunctionalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFunctionalityView.swift; sourceTree = "<group>"; };
@@ -97,7 +101,7 @@
 		CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalityRow.swift; sourceTree = "<group>"; };
 		CEDF26602B4F98F100D8D675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE4ADE42B381FAE007D54E9 /* PowerAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerAssessment.swift; sourceTree = "<group>"; };
-		CEF9A2AD2B2B37B30034E06F /* DeviceFunctionalityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceFunctionalityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF9A2AD2B2B37B30034E06F /* inOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAutomaticAsessmentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +167,7 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		CE40ADB52B2BD4D300F76E3C /* DeviceFunctionality */ = {
+		CE40ADB52B2BD4D300F76E3C /* inOS */ = {
 			isa = PBXGroup;
 			children = (
 				86985E2C2C87072F00253A8A /* App */,
@@ -172,7 +176,7 @@
 				CE40ADC12B2BD4D300F76E3C /* Preview Content */,
 				CE766A242C8DB46D00B54877 /* Resources */,
 			);
-			path = DeviceFunctionality;
+			path = inOS;
 			sourceTree = "<group>";
 		};
 		CE40ADC12B2BD4D300F76E3C /* Preview Content */ = {
@@ -199,8 +203,8 @@
 		CE5725882B294BE1000E4EC2 = {
 			isa = PBXGroup;
 			children = (
-				CE40ADB52B2BD4D300F76E3C /* DeviceFunctionality */,
-				CEF9A2AE2B2B37B30034E06F /* DeviceAssessmentTests */,
+				CE40ADB52B2BD4D300F76E3C /* inOS */,
+				CEF9A2AE2B2B37B30034E06F /* inOSTests */,
 				CE5725922B294BE1000E4EC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -208,8 +212,8 @@
 		CE5725922B294BE1000E4EC2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE5725912B294BE1000E4EC2 /* DeviceFunctionality.app */,
-				CEF9A2AD2B2B37B30034E06F /* DeviceFunctionalityTests.xctest */,
+				CE5725912B294BE1000E4EC2 /* inOS.app */,
+				CEF9A2AD2B2B37B30034E06F /* inOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +225,7 @@
 				86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */,
 				CE91C21C2B4E9DC700E1C413 /* FunctionalityRow.swift */,
 				CE40ADC52B2BD4D300F76E3C /* FunctionalityView.swift */,
+				919632EE2CCD714D00B84F3C /* IntroductionView.swift */,
 			);
 			path = Functional;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				CE11C4892BB1105700EC3028 /* Assessment+Ext.swift */,
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
 				CE766A292C8DC5B100B54877 /* Notifications.swift */,
+				919632F02CCD73C000B84F3C /* Bundle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -279,20 +285,20 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		CEF9A2AE2B2B37B30034E06F /* DeviceAssessmentTests */ = {
+		CEF9A2AE2B2B37B30034E06F /* inOSTests */ = {
 			isa = PBXGroup;
 			children = (
 				CEF9A2AF2B2B37B30034E06F /* DeviceAutomaticAsessmentTests.swift */,
 			);
-			path = DeviceAssessmentTests;
+			path = inOSTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE5725902B294BE1000E4EC2 /* DeviceFunctionality */ = {
+		CE5725902B294BE1000E4EC2 /* inOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE57259F2B294BE2000E4EC2 /* Build configuration list for PBXNativeTarget "DeviceFunctionality" */;
+			buildConfigurationList = CE57259F2B294BE2000E4EC2 /* Build configuration list for PBXNativeTarget "inOS" */;
 			buildPhases = (
 				CE57258D2B294BE1000E4EC2 /* Sources */,
 				CE57258E2B294BE1000E4EC2 /* Frameworks */,
@@ -302,18 +308,18 @@
 			);
 			dependencies = (
 			);
-			name = DeviceFunctionality;
+			name = inOS;
 			packageProductDependencies = (
 				CE066E2C2BAB2DE7007C7014 /* DeviceKit */,
 				CEEE205C2BAC0C7300E74937 /* AlertToast */,
 			);
 			productName = SpecAsessment;
-			productReference = CE5725912B294BE1000E4EC2 /* DeviceFunctionality.app */;
+			productReference = CE5725912B294BE1000E4EC2 /* inOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CEF9A2AC2B2B37B30034E06F /* DeviceFunctionalityTests */ = {
+		CEF9A2AC2B2B37B30034E06F /* inOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEF9A2B52B2B37B30034E06F /* Build configuration list for PBXNativeTarget "DeviceFunctionalityTests" */;
+			buildConfigurationList = CEF9A2B52B2B37B30034E06F /* Build configuration list for PBXNativeTarget "inOSTests" */;
 			buildPhases = (
 				CEF9A2A92B2B37B30034E06F /* Sources */,
 				CEF9A2AA2B2B37B30034E06F /* Frameworks */,
@@ -324,9 +330,9 @@
 			dependencies = (
 				CEF9A2B22B2B37B30034E06F /* PBXTargetDependency */,
 			);
-			name = DeviceFunctionalityTests;
+			name = inOSTests;
 			productName = SpecAsessmentTests;
-			productReference = CEF9A2AD2B2B37B30034E06F /* DeviceFunctionalityTests.xctest */;
+			productReference = CEF9A2AD2B2B37B30034E06F /* inOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -349,7 +355,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE57258C2B294BE1000E4EC2 /* Build configuration list for PBXProject "DeviceFunctionality" */;
+			buildConfigurationList = CE57258C2B294BE1000E4EC2 /* Build configuration list for PBXProject "inOS" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -366,8 +372,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE5725902B294BE1000E4EC2 /* DeviceFunctionality */,
-				CEF9A2AC2B2B37B30034E06F /* DeviceFunctionalityTests */,
+				CE5725902B294BE1000E4EC2 /* inOS */,
+				CEF9A2AC2B2B37B30034E06F /* inOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,6 +411,7 @@
 				CE40ADCF2B2BD4D300F76E3C /* FunctionalityView.swift in Sources */,
 				CE8C78D52B4989B5003139E1 /* CommonUtils.swift in Sources */,
 				CE766A352C8DDA3C00B54877 /* DeadpixelFunctionalityPresenter+StateAction.swift in Sources */,
+				919632F12CCD73C000B84F3C /* Bundle.swift in Sources */,
 				CE6CCA6E2B39A0E100F28F2A /* PhysicalActivityAssessment.swift in Sources */,
 				CE766A2A2C8DC5B100B54877 /* Notifications.swift in Sources */,
 				CE066E2F2BAB2E16007C7014 /* BiometricAuthentication.swift in Sources */,
@@ -429,6 +436,7 @@
 				CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */,
 				CE066E202BAB2B98007C7014 /* Storage.swift in Sources */,
 				86985E292C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift in Sources */,
+				919632EF2CCD714D00B84F3C /* IntroductionView.swift in Sources */,
 				CE40ADD12B2BDB8700F76E3C /* AssessmentTester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +454,7 @@
 /* Begin PBXTargetDependency section */
 		CEF9A2B22B2B37B30034E06F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE5725902B294BE1000E4EC2 /* DeviceFunctionality */;
+			target = CE5725902B294BE1000E4EC2 /* inOS */;
 			targetProxy = CEF9A2B12B2B37B30034E06F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -576,18 +584,18 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DeviceFunctionality/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"${TARGET_NAME}/Preview Content\"";
 				DEVELOPMENT_TEAM = SM8JGRFPQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeviceFunctionality/Resources/Info.plist;
+				INFOPLIST_FILE = "${PROJECT_NAME}/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = inOS;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow access to your Face ID to do biometric assessment";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to do assessment";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to do assessment";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to do assessment";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow access to your microphone to do assessment";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow access for speech recognition to do assessment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -600,7 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functional;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functionality;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -621,18 +629,18 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DeviceFunctionality/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"${TARGET_NAME}/Preview Content\"";
 				DEVELOPMENT_TEAM = SM8JGRFPQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeviceFunctionality/Resources/Info.plist;
+				INFOPLIST_FILE = "${PROJECT_NAME}/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = inOS;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to access WIFI SSID";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to access WIFI SSID";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow access to your Face ID to do biometric assessment";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow access to your location to do assessment";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow access to your location to do assessment";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to your location to do assessment";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow access to your microphone to do assessment";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow access for speech recognition to do assessment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -645,7 +653,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functional;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaisalqadri.device.functionality;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -696,7 +704,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE57258C2B294BE1000E4EC2 /* Build configuration list for PBXProject "DeviceFunctionality" */ = {
+		CE57258C2B294BE1000E4EC2 /* Build configuration list for PBXProject "inOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE57259D2B294BE2000E4EC2 /* Debug */,
@@ -705,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE57259F2B294BE2000E4EC2 /* Build configuration list for PBXNativeTarget "DeviceFunctionality" */ = {
+		CE57259F2B294BE2000E4EC2 /* Build configuration list for PBXNativeTarget "inOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE5725A02B294BE2000E4EC2 /* Debug */,
@@ -714,7 +722,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEF9A2B52B2B37B30034E06F /* Build configuration list for PBXNativeTarget "DeviceFunctionalityTests" */ = {
+		CEF9A2B52B2B37B30034E06F /* Build configuration list for PBXNativeTarget "inOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEF9A2B32B2B37B30034E06F /* Debug */,

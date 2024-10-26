@@ -13,7 +13,7 @@ import AlertToast
 struct FunctionalityView: View {
 
   @StateObject var presenter: FunctionalityPresenter
-  @AppStorage("isIntroduction") var isIntroduction: Bool = true
+  @State var isIntroduction: Bool = true
   @AppStorage("isDarkMode") var isDarkMode: Bool = false
   
   init() {
@@ -120,56 +120,12 @@ struct FunctionalityView: View {
       }
     }
     .sheet(isPresented: $isIntroduction) {
-      VStack(spacing: 16) {
-        let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
-        Text("Welcome to \(appName ?? "???")")
-          .font(.title)
-          .bold()
-          .multilineTextAlignment(.center)
-        
-        Text("This app is an utility app to perform serial of testing to check whether your phone is working with great functionality or not")
-          .multilineTextAlignment(.center)
-        
-        Divider()
-        
-        VStack(alignment: .leading) {
-          Text("• Serial Text")
-          Text("• Assessment Text")
-          Text("• BAM BAM BAM")
-        }
-        
-        Spacer()
-        
-        Divider()
-        
-        Button(action: {
-          isIntroduction = false
-        }) {
-          Text("Start")
-            .font(.system(size: 18, weight: .bold))
-            .foregroundColor(.white)
-        }
-        .frame(maxWidth: .infinity, maxHeight: 60)
-        .buttonStyle(.plain)
-        .background(Color.blue.clipShape(Capsule()))
-      }
-      .padding(.top, 16)
-      .padding(16)
+      IntroductionView(onStart: {
+        isIntroduction = false
+      })
     }
     .alert(isPresented: $presenter.state.isConfirmSerial) {
-      Alert(
-        title: Text("Do Serial Tests?"),
-        message: Text("By starting serial tests, all test will automatically start one after another"),
-        primaryButton: .default(Text("Start")) {
-          if presenter.state.isSerialRunning {
-            presenter.send(.terminateSerial)
-          } else {
-            presenter.send(.confirmSerial)
-            presenter.send(.runSerial)
-          }
-        },
-        secondaryButton: .cancel()
-      )
+      serialConfirmAlert()
     }
     .fullScreenCover(isPresented: $presenter.state.isSpecificationPresented) {
       SpecificationView([
@@ -193,6 +149,22 @@ struct FunctionalityView: View {
     .toast(isPresenting: $presenter.state.currentAssessment.isRunning, duration: .infinity, tapToDismiss: true) {
       AlertToast(displayMode: .hud, type: .regular, title: presenter.state.toastContents.testing)
     }
+  }
+  
+  private func serialConfirmAlert() -> Alert {
+    Alert(
+      title: Text("Do Serial Tests?"),
+      message: Text("By starting serial tests, all test will automatically start one after another"),
+      primaryButton: .default(Text("Start")) {
+        if presenter.state.isSerialRunning {
+          presenter.send(.terminateSerial)
+        } else {
+          presenter.send(.confirmSerial)
+          presenter.send(.runSerial)
+        }
+      },
+      secondaryButton: .cancel()
+    )
   }
 }
 

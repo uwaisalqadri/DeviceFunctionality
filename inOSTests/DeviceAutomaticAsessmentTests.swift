@@ -7,7 +7,7 @@
 
 import XCTest
 import Foundation
-@testable import DeviceAssessment
+@testable import inOS
 import CoreMotion
 import CoreTelephony
 

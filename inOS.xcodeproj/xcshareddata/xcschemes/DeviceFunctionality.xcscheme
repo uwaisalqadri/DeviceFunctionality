@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE5725902B294BE1000E4EC2"
-               BuildableName = "DeviceFunctionality.app"
-               BlueprintName = "DeviceFunctionality"
-               ReferencedContainer = "container:DeviceFunctionality.xcodeproj">
+               BuildableName = "inOS.app"
+               BlueprintName = "inOS"
+               ReferencedContainer = "container:inOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE5725902B294BE1000E4EC2"
-            BuildableName = "DeviceFunctionality.app"
-            BlueprintName = "DeviceFunctionality"
-            ReferencedContainer = "container:DeviceFunctionality.xcodeproj">
+            BuildableName = "inOS.app"
+            BlueprintName = "inOS"
+            ReferencedContainer = "container:inOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE5725902B294BE1000E4EC2"
-            BuildableName = "DeviceFunctionality.app"
-            BlueprintName = "DeviceFunctionality"
-            ReferencedContainer = "container:DeviceFunctionality.xcodeproj">
+            BuildableName = "inOS.app"
+            BlueprintName = "inOS"
+            ReferencedContainer = "container:inOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
