@@ -13,7 +13,7 @@ import AlertToast
 struct FunctionalityView: View {
 
   @StateObject var presenter: FunctionalityPresenter
-  @State var isIntroduction: Bool = true
+  @AppStorage("isIntroduction") var isIntroduction: Bool = true
   @AppStorage("isDarkMode") var isDarkMode: Bool = false
   
   init() {
