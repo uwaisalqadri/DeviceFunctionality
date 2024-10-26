@@ -13,7 +13,9 @@ import AlertToast
 struct FunctionalityView: View {
 
   @StateObject var presenter: FunctionalityPresenter
-
+  @AppStorage("isIntroduction") var isIntroduction: Bool = true
+  @AppStorage("isDarkMode") var isDarkMode: Bool = false
+  
   init() {
     _presenter = StateObject(
       wrappedValue: FunctionalityPresenter()
@@ -27,7 +29,8 @@ struct FunctionalityView: View {
           ForEach(FunctionalityPresenter.GridSide.allCases, id: \.self) { side in
             VStack(spacing: 12) {
               ForEach(Array(presenter.splitForGrid(side: side).enumerated()), id: \.offset) { _, item in
-                FunctionalityRow(item: item, onTestFunction: {
+                let isPassed = presenter.state.passedAssessments[item] ?? false
+                FunctionalityRow(item: item, isPassed: isPassed, onTestFunction: {
                   presenter.send(.start(assessment: item))
                 })
                 .padding(.horizontal, 3)
@@ -43,6 +46,19 @@ struct FunctionalityView: View {
       .toolbar {
         ToolbarItem {
           Button(action: {
+            isDarkMode.toggle()
+            UIApplication.shared.windows.first?
+              .rootViewController?
+              .overrideUserInterfaceStyle = isDarkMode ? .dark : .light
+          }) {
+            Image(systemName: isDarkMode ? "sun.max" : "moon")
+              .resizable()
+              .scaleEffect(1)
+          }
+        }
+        
+        ToolbarItem {
+          Button(action: {
             presenter.send(.confirmSerial)
           }) {
             let rotation: Double = presenter.state.isSerialRunning ? 0 : 360
@@ -54,6 +70,43 @@ struct FunctionalityView: View {
           }
         }
       }
+    }
+    .sheet(isPresented: $isIntroduction) {
+      VStack(spacing: 16) {
+        let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
+        Text("Welcome to \(appName ?? "???")")
+          .font(.title)
+          .bold()
+          .multilineTextAlignment(.center)
+        
+        Text("This app is an utility app to perform serial of testing to check whether your phone is working with great functionality or not")
+          .multilineTextAlignment(.center)
+        
+        Divider()
+        
+        VStack(alignment: .leading) {
+          Text("• Serial Text")
+          Text("• Assessment Text")
+          Text("• BAM BAM BAM")
+        }
+        
+        Spacer()
+        
+        Divider()
+        
+        Button(action: {
+          isIntroduction = false
+        }) {
+          Text("Start")
+            .font(.system(size: 18, weight: .bold))
+            .foregroundColor(.white)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 60)
+        .buttonStyle(.plain)
+        .background(Color.blue.clipShape(Capsule()))
+      }
+      .padding(.top, 16)
+      .padding(16)
     }
     .alert(isPresented: $presenter.state.isConfirmSerial) {
       Alert(

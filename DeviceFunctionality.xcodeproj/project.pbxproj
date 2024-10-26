@@ -145,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				CE766A2F2C8DD9B900B54877 /* Deadpixel */,
-				CE766A2E2C8DD9B000B54877 /* Camera */,
 				CE766A222C8DB42000B54877 /* Functional */,
 				CE766A232C8DB43700B54877 /* Screen */,
 				CE766A2D2C8DD99300B54877 /* Utils */,
@@ -243,13 +242,6 @@
 				CE766A292C8DC5B100B54877 /* Notifications.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		CE766A2E2C8DD9B000B54877 /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Camera;
 			sourceTree = "<group>";
 		};
 		CE766A2F2C8DD9B900B54877 /* Deadpixel */ = {
@@ -577,6 +569,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceFunctionality/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = inOS;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
@@ -589,6 +582,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,6 +614,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceFunctionality/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = inOS;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Uses Face ID for your device assessment";
@@ -632,6 +627,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
