@@ -9,42 +9,43 @@ import SwiftUI
 
 struct FunctionalityRow: View {
   let item: Assessment
-  var isPassed: Bool
-  
+  var isPassed: Bool?
   var onTestFunction: (() -> Void)?
+  
+  var iconColor: Color {
+    switch isPassed {
+    case true:
+      return .blue
+    case false:
+      return .red.opacity(0.8)
+    default:
+      return .blue.opacity(0.3)
+    }
+  }
   
   var body: some View {
     Button(action: {
       UIImpactFeedbackGenerator().impactOccurred()
       onTestFunction?()
     }) {
-      ZStack(alignment: .topTrailing) {
-        VStack(alignment: .leading, spacing: 0) {
-          Image(systemName: item.icon)
-            .font(.system(size: 30))
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .foregroundColor(.blue.opacity(0.8))
-          
-          Spacer()
-          
-          Text(item.title)
-            .bold()
-            .padding(.top, 16)
-          
-          Text(item.value)
-            .font(.system(size: 14))
-            .padding(.top, 3)
-            .fixedSize(horizontal: false, vertical: true)
-        }
-        .frame(height: 130)
+      VStack(alignment: .leading, spacing: 0) {
+        Image(systemName: item.icon)
+          .font(.system(size: 30))
+          .frame(maxWidth: .infinity, alignment: .leading)
+          .foregroundColor(iconColor)
         
-        if isPassed {
-          Image(systemName: "checkmark.circle.fill")
-            .resizable()
-            .frame(width: 20, height: 20)
-            .foregroundColor(.green)
-        }
+        Spacer()
+        
+        Text(item.title)
+          .bold()
+          .padding(.top, 16)
+        
+        Text(item.value)
+          .font(.system(size: 14))
+          .padding(.top, 3)
+          .fixedSize(horizontal: false, vertical: true)
       }
+      .frame(height: 130)
       .padding(14)
       .background(
         RoundedRectangle(cornerRadius: 12)

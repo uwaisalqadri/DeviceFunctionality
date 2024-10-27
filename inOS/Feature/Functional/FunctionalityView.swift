@@ -48,6 +48,11 @@ struct FunctionalityView: View {
                 }
               }
               .buttonStyle(.plain)
+              .background(
+                NavigationLink(destination: SpecificationView(), isActive: $presenter.state.isSpecificationPresented) {
+                  EmptyView()
+                }
+              )
               
               Spacer()
             }
@@ -63,7 +68,7 @@ struct FunctionalityView: View {
             ForEach(FunctionalityPresenter.GridSide.allCases, id: \.self) { side in
               VStack(spacing: 12) {
                 ForEach(Array(presenter.splitForGrid(side: side).enumerated()), id: \.offset) { _, item in
-                  let isPassed = presenter.state.passedAssessments[item] ?? false
+                  let isPassed = presenter.state.passedAssessments[item]
                   FunctionalityRow(item: item, isPassed: isPassed, onTestFunction: {
                     presenter.send(.start(assessment: item))
                   })
@@ -77,7 +82,7 @@ struct FunctionalityView: View {
         .padding(.top, 30)
         .padding(.bottom, 40)
       }
-      .onAppear {
+      .onFirstAppear {
         presenter.send(.loadStatus)
       }
       .toolbar {
@@ -127,13 +132,6 @@ struct FunctionalityView: View {
     .alert(isPresented: $presenter.state.isConfirmSerial) {
       serialConfirmAlert()
     }
-    .fullScreenCover(isPresented: $presenter.state.isSpecificationPresented) {
-      SpecificationView([
-        .init(title: "Model", value: "iPhone 12 Mini"),
-        .init(title: "Model", value: "iPhone 12 Mini"),
-        .init(title: "Model", value: "iPhone 12 Mini"),
-      ])
-    }
     .fullScreenCover(isPresented: $presenter.state.isTouchscreenPresented) {
       ScreenFunctionalityView()
     }
@@ -143,11 +141,26 @@ struct FunctionalityView: View {
     .fullScreenCover(isPresented: $presenter.state.isDeadpixelPresented) {
       DeadpixelFunctionalityView()
     }
-    .toast(isPresenting: $presenter.state.isAssessmentPassed, duration: 3.4) {
-      AlertToast(displayMode: .hud, type: .regular, title: presenter.state.toastContents.finished)
+    .toast(
+      isPresenting: $presenter.state.isAssessmentPassed,
+      duration: 2.5
+    ) {
+      AlertToast(
+        displayMode: .hud,
+        type: .regular,
+        title: presenter.state.toastContents.finished
+      )
     }
-    .toast(isPresenting: $presenter.state.currentAssessment.isRunning, duration: .infinity, tapToDismiss: true) {
-      AlertToast(displayMode: .hud, type: .regular, title: presenter.state.toastContents.testing)
+    .toast(
+      isPresenting: $presenter.state.currentAssessment.isRunning,
+      duration: .infinity,
+      tapToDismiss: false
+    ) {
+      AlertToast(
+        displayMode: .hud,
+        type: .regular,
+        title: presenter.state.toastContents.testing
+      )
     }
   }
   

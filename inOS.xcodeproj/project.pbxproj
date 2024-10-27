@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		86985E292C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */; };
+		91778CCD2CCDD8C500B70FF4 /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778CCC2CCDD8C500B70FF4 /* OnFirstAppearModifier.swift */; };
 		919632EB2CCD6CF300B84F3C /* SpecificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919632EA2CCD6CF300B84F3C /* SpecificationView.swift */; };
 		919632EF2CCD714D00B84F3C /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919632EE2CCD714D00B84F3C /* IntroductionView.swift */; };
 		919632F12CCD73C000B84F3C /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919632F02CCD73C000B84F3C /* Bundle.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		86985E282C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FunctionalityPresenter+StateAction.swift"; sourceTree = "<group>"; };
+		91778CCC2CCDD8C500B70FF4 /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
 		919632EA2CCD6CF300B84F3C /* SpecificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationView.swift; sourceTree = "<group>"; };
 		919632EE2CCD714D00B84F3C /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
 		919632F02CCD73C000B84F3C /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				CE8C78D42B4989B5003139E1 /* CommonUtils.swift */,
 				CE766A292C8DC5B100B54877 /* Notifications.swift */,
 				919632F02CCD73C000B84F3C /* Bundle.swift */,
+				91778CCC2CCDD8C500B70FF4 /* OnFirstAppearModifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				CE766A312C8DD9F600B54877 /* DeadpixelFunctionalityView.swift in Sources */,
 				CE066E242BAB2BB6007C7014 /* Device+Ext.swift in Sources */,
 				CEE4ADE52B381FAE007D54E9 /* PowerAssessment.swift in Sources */,
+				91778CCD2CCDD8C500B70FF4 /* OnFirstAppearModifier.swift in Sources */,
 				CE066E202BAB2B98007C7014 /* Storage.swift in Sources */,
 				86985E292C86FF8900253A8A /* FunctionalityPresenter+StateAction.swift in Sources */,
 				919632EF2CCD714D00B84F3C /* IntroductionView.swift in Sources */,

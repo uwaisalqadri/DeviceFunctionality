@@ -69,7 +69,6 @@ extension FunctionalityPresenter {
 
     for assessment in assessments {
       await beginAssessment(for: assessment, isSerial: true)
-      send(.shouldShow(assessment: assessment, isPresented: true))
     }
 
     state.isSerialRunning = false
@@ -83,10 +82,10 @@ extension FunctionalityPresenter {
       for try await isAssessmentPassed in streamAssessment(for: assessment) {
         state.currentAssessment = (assessment, false)
         state.isAssessmentPassed = isAssessmentPassed
-        state.passedAssessments[assessment] = true
+        state.passedAssessments[assessment] = isAssessmentPassed
       }
     } catch {
-      print("Assessment failed for \(assessment): \(error)")
+      state.passedAssessments[assessment] = false
     }
 
     if isSerial {
@@ -161,6 +160,8 @@ extension FunctionalityPresenter {
           .store(in: &cancellables)
 
       case .camera:
+        send(.shouldShow(assessment: assessment, isPresented: true))
+        
         NotificationCenter.default.publisher(for: Notifications.didCameraPassed)
           .sink { notification in
             guard let isPassed = notification.object as? Bool else { return }
@@ -171,6 +172,8 @@ extension FunctionalityPresenter {
           .store(in: &cancellables)
 
       case .touchscreen:
+        send(.shouldShow(assessment: assessment, isPresented: true))
+        
         NotificationCenter.default.publisher(for: Notifications.didTouchScreenPassed)
           .sink { notification in
             guard let isPassed = notification.object as? Bool else { return }
@@ -204,6 +207,8 @@ extension FunctionalityPresenter {
         }
 
       case .deadpixel:
+        send(.shouldShow(assessment: assessment, isPresented: true))
+
         NotificationCenter.default.publisher(for: Notifications.didDeadpixelPassed)
           .sink { notification in
             guard let isPassed = notification.object as? Bool else { return }
@@ -235,6 +240,8 @@ extension FunctionalityPresenter {
   }
   
   private func loadDeviceStatus() {
+    state.deviceStatuses = []
+    
     if let cpu = drivers[.deviceInfo]?.assessments[.cpu] as? CpuInformation {
       state.deviceStatuses.append(.init(.cpu, value: cpu.frequency ?? "-"))
     }
@@ -249,8 +256,9 @@ extension FunctionalityPresenter {
     drivers[.power]?.startAssessment(for: .batteryStatus) { [drivers] in
       if let battery = drivers[.power]?.assessments[.batteryStatus] as? Battery {
         self.state.deviceStatuses.append(.init(.battery, value: battery.percentage ?? "-"))
-        self.state.deviceStatuses.append(.init(.other, value: "Others"))
       }
     }
+    
+    state.deviceStatuses.append(.init(.other, value: "Others"))
   }
 }
