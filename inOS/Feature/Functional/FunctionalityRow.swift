@@ -17,7 +17,7 @@ struct FunctionalityRow: View {
     case true:
       return .blue
     case false:
-      return .red.opacity(0.8)
+      return .red
     default:
       return .blue.opacity(0.3)
     }

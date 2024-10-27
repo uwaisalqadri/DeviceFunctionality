@@ -149,7 +149,7 @@ extension Assessment {
     case .volumeUp:
       return "Ensure the volume up button is responsive"
     case .volumeDown:
-      return "Check the responsiveness of the volume down button"
+      return "Ensure the volume down button is responsive"
     case .powerButton:
       return "Verify the functionality of the power button"
     case .vibration:

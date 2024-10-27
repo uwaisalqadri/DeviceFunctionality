@@ -195,7 +195,7 @@ extension CameraAssessmentViewController: AVCapturePhotoCaptureDelegate {
       checkCameraDetectBright(uiImage: uiImage) {
         onDismiss()
         delay(bySeconds: 0.5) {
-          Notifications.didCameraPassed.post(with: 1)
+          Notifications.didCameraPassed.post(with: true)
           self.cameraSessionTimer?.invalidate()
         }
       }
@@ -221,6 +221,7 @@ extension CameraAssessmentViewController: AVCapturePhotoCaptureDelegate {
     } else {
       isBackCameraUndetected = true
     }
+    Notifications.didCameraPassed.post(with: false)
   }
 }
 

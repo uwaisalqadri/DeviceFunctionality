@@ -37,6 +37,9 @@ struct DeadpixelFunctionalityView: View {
     .onAppear {
       presenter.send(.setTimer)
     }
+    .onTapGesture {
+      presenter.send(.failed)
+    }
   }
 }
 

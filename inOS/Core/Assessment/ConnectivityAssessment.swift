@@ -53,11 +53,13 @@ public class ConnectivityAssessment: NSObject, AssessmentDriver {
       cellularPathMonitor?.start(queue: cellularConnectionQueue)
       
       cellularPathMonitor?.pathUpdateHandler = { [weak self] path in
-        guard path.usesInterfaceType(.cellular) else { return }
-        
-        self?.assessments[.cellular] = true
+        if path.status == .satisfied && path.usesInterfaceType(.cellular) {
+          self?.assessments[.cellular] = true
+          self?.cellularPathMonitor?.cancel()
+        } else {
+          self?.assessments[.cellular] = false
+        }
         completion?()
-        self?.cellularPathMonitor?.cancel()
       }
       
     case .wifi:
@@ -65,11 +67,13 @@ public class ConnectivityAssessment: NSObject, AssessmentDriver {
       wifiPathMonitor?.start(queue: wifiConnectionQueue)
       
       wifiPathMonitor?.pathUpdateHandler = { [weak self] path in
-        guard path.usesInterfaceType(.wifi) else { return }
-        
-        self?.assessments[.wifi] = true
+        if path.status == .satisfied && path.usesInterfaceType(.wifi) {
+          self?.assessments[.wifi] = true
+          self?.wifiPathMonitor?.cancel()
+        } else {
+          self?.assessments[.wifi] = false
+        }
         completion?()
-        self?.wifiPathMonitor?.cancel()
       }
       
     case .bluetooth:

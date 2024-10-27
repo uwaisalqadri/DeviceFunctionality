@@ -29,21 +29,13 @@ class DeadpixelFunctionalityPresenter: ObservableObject {
 extension DeadpixelFunctionalityPresenter {
   private func setTimer() {
     var timer: Timer?
-    timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
+    timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
       if self.state.index < 4 {
         self.state.index += 1
       } else {
         self.send(.success)
         timer?.invalidate()
       }
-    }
-  }
-
-  private func isDeviceAssessmentRetryStillAvailable(completion: (() -> Void)?) {
-    if state.retryCount > 0 {
-      completion?()
-    } else {
-      send(.failed)
     }
   }
 }
