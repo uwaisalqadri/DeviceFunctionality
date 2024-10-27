@@ -9,13 +9,68 @@ import AVFoundation
 import SwiftUI
 import Combine
 
-struct CameraFunctionalityView: UIViewControllerRepresentable {
+struct CameraFunctionalityView: View {
+  @State var isCheckingFrontCamera = false
+  @State var isFrontCameraUndetected = false
+  @State var isBackCameraUndetected = false
+  
+  var body: some View {
+    ZStack {
+      Color.black.ignoresSafeArea(.all)
+      
+      CameraAssessmentViewRepresentable(
+        isCheckingFrontCamera: $isCheckingFrontCamera,
+        isFrontCameraUndetected: $isFrontCameraUndetected,
+        isBackCameraUndetected: $isBackCameraUndetected
+      )
+      
+      VStack {
+        if !isBackCameraUndetected || !isFrontCameraUndetected {
+          Spacer()
+            .frame(height: 90)
+            .background(Color.clear)
+          
+          Text(isCheckingFrontCamera ? "Checking front camera" : "Checking rear camera")
+            .font(.system(size: 20, weight: .bold))
+            .frame(width: UIScreen.main.bounds.width - 35, height: 44)
+            .padding(.horizontal)
+            .background(Color.white)
+            .cornerRadius(12)
+          
+          Spacer()
+            .background(Color.clear)
+        }
+      }
+
+    }
+  }
+}
+
+struct CameraAssessmentViewRepresentable: UIViewControllerRepresentable {
   @Environment(\.presentationMode) var presentation
+  @Binding var isCheckingFrontCamera: Bool
+  @Binding var isFrontCameraUndetected: Bool
+  @Binding var isBackCameraUndetected: Bool
+  
+  init(
+    isCheckingFrontCamera: Binding<Bool>,
+    isFrontCameraUndetected: Binding<Bool>,
+    isBackCameraUndetected: Binding<Bool>
+  ) {
+    _isCheckingFrontCamera = isCheckingFrontCamera
+    _isFrontCameraUndetected = isFrontCameraUndetected
+    _isBackCameraUndetected = isBackCameraUndetected
+  }
   
   func makeUIViewController(context: Context) -> CameraAssessmentViewController {
-    CameraAssessmentViewController(onDismiss: {
-      presentation.wrappedValue.dismiss()
-    })
+    CameraAssessmentViewController(
+      isCheckingFrontCamera: $isCheckingFrontCamera,
+      isFrontCameraUndetected: $isFrontCameraUndetected,
+      isBackCameraUndetected: $isBackCameraUndetected,
+      onDismiss: {
+        presentation.wrappedValue.dismiss()
+      }
+    )
   }
   
   func updateUIViewController(_ uiViewController: CameraAssessmentViewController, context: Context) {}
@@ -25,9 +80,20 @@ struct CameraFunctionalityView: UIViewControllerRepresentable {
 
 class CameraAssessmentViewController: UIViewController {
   
+  @Binding var isCheckingFrontCamera: Bool
+  @Binding var isFrontCameraUndetected: Bool
+  @Binding var isBackCameraUndetected: Bool
   let onDismiss: () -> Void
   
-  init(onDismiss: @escaping () -> Void) {
+  init(
+    isCheckingFrontCamera: Binding<Bool>,
+    isFrontCameraUndetected: Binding<Bool>,
+    isBackCameraUndetected: Binding<Bool>,
+    onDismiss: @escaping () -> Void
+  ) {
+    _isCheckingFrontCamera = isCheckingFrontCamera
+    _isFrontCameraUndetected = isFrontCameraUndetected
+    _isBackCameraUndetected = isBackCameraUndetected
     self.onDismiss = onDismiss
     super.init(nibName: nil, bundle: nil)
   }
@@ -36,9 +102,6 @@ class CameraAssessmentViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
     
-  var isCheckingFrontCamera = false
-  var isFrontCameraUndetected = false
-  var isBackCameraUndetected = false
   var isCameraNoAccess = false
   var cancellables = Set<AnyCancellable>()
   
