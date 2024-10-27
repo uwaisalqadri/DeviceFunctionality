@@ -26,13 +26,11 @@ struct FunctionalityView: View {
     NavigationView {
       ScrollView {
         VStack {
-          HStack(spacing: 6) {
+          HStack(spacing: 0) {
             ForEach(
               Array(presenter.state.deviceStatuses.enumerated()),
               id: \.offset
             ) { _, status in
-              Spacer()
-              
               Button(action: {
                 if status.isOther {
                   presenter.state.isSpecificationPresented.toggle()
@@ -49,14 +47,20 @@ struct FunctionalityView: View {
               }
               .buttonStyle(.plain)
               .background(
-                NavigationLink(destination: SpecificationView(), isActive: $presenter.state.isSpecificationPresented) {
+                NavigationLink(
+                  destination: SpecificationView(),
+                  isActive: $presenter.state.isSpecificationPresented
+                ) {
                   EmptyView()
                 }
               )
               
-              Spacer()
+              if presenter.state.deviceStatuses.last != status {
+                Spacer(minLength: 0)
+              }
             }
           }
+          .padding(.horizontal)
           .frame(height: 60)
           .background(
             RoundedRectangle(cornerRadius: 12)
@@ -136,7 +140,7 @@ struct FunctionalityView: View {
       ScreenFunctionalityView()
     }
     .fullScreenCover(isPresented: $presenter.state.isCameraPresented) {
-      EmptyView()
+      CameraFunctionalityView()
     }
     .fullScreenCover(isPresented: $presenter.state.isDeadpixelPresented) {
       DeadpixelFunctionalityView()

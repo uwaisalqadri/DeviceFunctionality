@@ -20,17 +20,17 @@ struct DeadpixelFunctionalityView: View {
     ZStack {
       switch presenter.state.index {
       case 0:
-        Color.red
+        Color(.redDeadPixel)
       case 1:
-        Color.green
+        Color(.greenDeadPixel)
       case 2:
-        Color.blue
+        Color(.blueDeadPixel)
       case 3:
         Color.black
       case 4:
         Color.white
       default:
-        Color.red
+        Color(.redDeadPixel)
       }
     }
     .edgesIgnoringSafeArea(.all)

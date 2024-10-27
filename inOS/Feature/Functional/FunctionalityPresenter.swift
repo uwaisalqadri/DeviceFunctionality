@@ -260,5 +260,9 @@ extension FunctionalityPresenter {
     }
     
     state.deviceStatuses.append(.init(.other, value: "Others"))
+    
+    if let passedAssessments = UserDefaults.standard.dictionary(forKey: "passed_assessments") as? [Assessment: Bool] {
+      state.passedAssessments = passedAssessments
+    }
   }
 }

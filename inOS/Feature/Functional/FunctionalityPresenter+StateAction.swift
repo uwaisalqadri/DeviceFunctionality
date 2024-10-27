@@ -19,7 +19,11 @@ extension FunctionalityPresenter {
     var isSerialRunning = false
     var isConfirmSerial = false
     var allAssessments: [Assessment] = Assessment.allCases
-    var passedAssessments: [Assessment: Bool] = [:]
+    var passedAssessments: [Assessment: Bool] = [:] {
+      didSet {
+//        UserDefaults.standard.set(passedAssessments, forKey: "passed_assessments")
+      }
+    }
     var deviceStatuses: [Status] = []
     var deviceStatus: Status {
       .init(.phone, value: Device.current.safeDescription)
@@ -42,7 +46,7 @@ extension FunctionalityPresenter {
 }
 
 extension FunctionalityPresenter {
-  struct Status {
+  struct Status: Equatable {
     let spec: Specs
     let value: String
     var isOther: Bool {

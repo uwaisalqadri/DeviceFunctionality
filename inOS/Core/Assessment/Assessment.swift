@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Assessment: CaseIterable, Codable {
+public enum Assessment: String, CaseIterable, Codable {
   case cpu
   case storage
   case batteryStatus
@@ -47,7 +47,7 @@ public enum Assessment: CaseIterable, Codable {
       .volumeDown,
       .powerButton,
       .vibration,
-//      .camera,
+      .camera,
       .touchscreen,
       .sim,
       .wifi,

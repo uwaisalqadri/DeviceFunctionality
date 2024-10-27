@@ -27,7 +27,7 @@ struct SpecificationView: View {
           .frame(maxWidth: .infinity, alignment: .leading)
       }
       .padding()
-      .background(Color.gray.opacity(0.2))
+      .background(Color.gray.opacity(0.1))
       .clipShape(RoundedRectangle(cornerRadius: 14))
       .frame(height: 50)
       
