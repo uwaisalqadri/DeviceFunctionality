@@ -33,6 +33,7 @@ struct FunctionalityRow: View {
           .font(.system(size: 30))
           .frame(maxWidth: .infinity, alignment: .leading)
           .foregroundColor(iconColor)
+          .padding(.top, 10)
         
         Spacer()
         

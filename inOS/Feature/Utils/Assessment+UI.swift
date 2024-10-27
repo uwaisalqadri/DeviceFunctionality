@@ -32,7 +32,7 @@ extension Assessment {
       return "camera"
     case .touchscreen:
       return "hand.point.up.left"
-    case .sim:
+    case .cellular:
       return "simcard"
     case .wifi:
       return "wifi"
@@ -64,6 +64,10 @@ extension Assessment {
       return "speedometer"
     case .compass:
       return "location.north.line.fill"
+    case .connector:
+      return "cable.connector.horizontal"
+    case .wirelessCharging:
+      return "bolt.circle.fill"
     }
   }
   
@@ -91,8 +95,8 @@ extension Assessment {
       return "Camera"
     case .touchscreen:
       return "Touch Screen"
-    case .sim:
-      return "SIM"
+    case .cellular:
+      return "Cellular"
     case .wifi:
       return "Wi-Fi"
     case .biometric:
@@ -123,6 +127,10 @@ extension Assessment {
       return "Barometer"
     case .compass:
       return "Compass"
+    case .connector:
+      return "Connector"
+    case .wirelessCharging:
+      return "Wireless Charging"
     }
   }
   
@@ -150,12 +158,12 @@ extension Assessment {
       return "Ensure the camera functionality is intact"
     case .touchscreen:
       return "Check the responsiveness of the touch screen"
-    case .sim:
-      return "Verify the status of your SIM card"
+    case .cellular:
+      return "Verify the status of your cellular"
     case .wifi:
       return "Test the connectivity of your device to Wi-Fi networks"
     case .biometric:
-      return "Ensure the functionality of biometric authentication"
+      return "Ensure the functionality of biometric auth"
     case .accelerometer:
       return "Test the accelerometer sensor of your device"
     case .bluetooth:
@@ -182,6 +190,10 @@ extension Assessment {
       return "Test the barometer sensor for pressure measurement"
     case .compass:
       return "Verify the compass accuracy and functionality"
+    case .connector:
+      return "Check if the physical connector is functioning"
+    case .wirelessCharging:
+      return "Verify the wireless charging capability"
     }
   }
   
@@ -202,14 +214,14 @@ extension Assessment {
     case .volumeDown:
       return "Volume down button is responsive!"
     case .powerButton:
-      return "Power button is functioning properly!"
+      return "Power button is functioning!"
     case .vibration:
-      return "Vibration motor is working correctly!"
+      return "Vibration is working!"
     case .camera:
       return "Camera functionality is intact!"
     case .touchscreen:
       return "Touch screen is responsive!"
-    case .sim:
+    case .cellular:
       return "SIM card status verified!"
     case .wifi:
       return "Wi-Fi connectivity tested!"
@@ -224,13 +236,13 @@ extension Assessment {
     case .homeButton:
       return "Home button is responsive!"
     case .mainSpeaker:
-      return "Speaker producing sound properly!"
+      return "Speaker sound properly!"
     case .earSpeaker:
-      return "Ear speaker functionality tested!"
+      return "Ear speaker sound properly!"
     case .proximity:
       return "Proximity sensor worked!"
     case .deadpixel:
-      return "No dead pixels detected on the screen!"
+      return "No dead pixels detected!"
     case .rotation:
       return "Screen rotation feature verified!"
     case .microphone:
@@ -241,6 +253,10 @@ extension Assessment {
       return "Barometer sensor is functioning well!"
     case .compass:
       return "Compass is calibrated and accurate!"
+    case .connector:
+      return "Connector is functional!"
+    case .wirelessCharging:
+      return "Wireless charging works correctly!"
     }
   }
   
@@ -256,7 +272,7 @@ extension Assessment {
       return "Press the power button"
     case .wifi:
       return "Connect to a Wi-Fi network"
-    case .sim:
+    case .cellular:
       return "Turn On Cellular"
     case .bluetooth:
       return "Turn On/Off Bluetooth"
@@ -276,5 +292,4 @@ extension Assessment {
       return ""
     }
   }
-  
 }

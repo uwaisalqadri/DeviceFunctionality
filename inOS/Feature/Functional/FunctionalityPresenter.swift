@@ -183,7 +183,7 @@ extension FunctionalityPresenter {
           }
           .store(in: &cancellables)
 
-      case .sim, .wifi, .bluetooth, .gps:
+      case .cellular, .wifi, .bluetooth, .gps:
         drivers[.connectivity]?.startAssessment(for: assessment) { [drivers] in
           continuation.yield(drivers[.connectivity]?.hasAssessmentPassed[assessment] ?? false)
           continuation.finish()
@@ -234,6 +234,12 @@ extension FunctionalityPresenter {
         break
         
       case .compass:
+        break
+        
+      case .connector:
+        break
+        
+      case .wirelessCharging:
         break
       }
     }

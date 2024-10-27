@@ -30,7 +30,7 @@ public class ConnectivityAssessment: NSObject, AssessmentDriver {
   public var hasAssessmentPassed: [Assessment: Bool] {
     var results: [Assessment: Bool] = [:]
     
-    let assessmentTypes: [Assessment] = [.wifi, .sim, .bluetooth, .gps]
+    let assessmentTypes: [Assessment] = [.wifi, .cellular, .bluetooth, .gps]
     
     for type in assessmentTypes {
       results[type] = assessments[type] as? Bool ?? false
@@ -41,21 +41,21 @@ public class ConnectivityAssessment: NSObject, AssessmentDriver {
   
   public var assessments: [Assessment: Any] = [
     .wifi: false,
-    .sim: false,
+    .cellular: false,
     .bluetooth: false,
     .gps: false
   ]
   
   public func startAssessment(for type: Assessment, completion: (() -> Void)? = nil) {
     switch type {
-    case .sim:
+    case .cellular:
       cellularPathMonitor = NWPathMonitor()
       cellularPathMonitor?.start(queue: cellularConnectionQueue)
       
       cellularPathMonitor?.pathUpdateHandler = { [weak self] path in
         guard path.usesInterfaceType(.cellular) else { return }
         
-        self?.assessments[.sim] = true
+        self?.assessments[.cellular] = true
         completion?()
         self?.cellularPathMonitor?.cancel()
       }
@@ -116,7 +116,7 @@ public class ConnectivityAssessment: NSObject, AssessmentDriver {
     switch type {
     case .wifi:
       wifiPathMonitor?.cancel()
-    case .sim:
+    case .cellular:
       cellularPathMonitor?.cancel()
     default:
       break
