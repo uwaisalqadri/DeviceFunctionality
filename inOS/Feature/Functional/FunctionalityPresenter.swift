@@ -98,7 +98,7 @@ extension FunctionalityPresenter {
     return AsyncThrowingStream { continuation in
       switch assessment {
       case .cpu:
-        if let cpu = drivers[.deviceInfo]?.assessments[assessment] as? CpuInformation {
+        if let cpu = drivers[.deviceInfo]?.assessments[assessment] as? CPUInformation {
           continuation.yield(cpu.model?.isEmpty != true)
           continuation.finish()
         }
@@ -248,7 +248,7 @@ extension FunctionalityPresenter {
   private func loadDeviceStatus() {
     state.deviceStatuses = []
     
-    if let cpu = drivers[.deviceInfo]?.assessments[.cpu] as? CpuInformation {
+    if let cpu = drivers[.deviceInfo]?.assessments[.cpu] as? CPUInformation {
       state.deviceStatuses.append(.init(.cpu, value: cpu.frequency ?? "-"))
     }
     

@@ -1,5 +1,5 @@
 //
-//  CpuInformation.swift
+//  CPUInformation.swift
 //  DeviceAssessment
 //
 //  Created by Uwais Alqadri on 20/3/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CpuInformation {
+public struct CPUInformation {
   public var model: String?
   public var coreCount: Int?
   public var architecture: String?

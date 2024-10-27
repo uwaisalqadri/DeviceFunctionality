@@ -18,7 +18,7 @@
 		CE066E162BAB2B13007C7014 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */; };
 		CE066E182BAB2B25007C7014 /* VolumeButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */; };
 		CE066E1C2BAB2B7E007C7014 /* Battery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E1B2BAB2B7E007C7014 /* Battery.swift */; };
-		CE066E1E2BAB2B8B007C7014 /* CpuInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E1D2BAB2B8B007C7014 /* CpuInformation.swift */; };
+		CE066E1E2BAB2B8B007C7014 /* CPUInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E1D2BAB2B8B007C7014 /* CPUInformation.swift */; };
 		CE066E202BAB2B98007C7014 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E1F2BAB2B98007C7014 /* Storage.swift */; };
 		CE066E242BAB2BB6007C7014 /* Device+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E232BAB2BB6007C7014 /* Device+Ext.swift */; };
 		CE066E262BAB2BC2007C7014 /* DeviceBasicInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE066E252BAB2BC2007C7014 /* DeviceBasicInformation.swift */; };
@@ -75,7 +75,7 @@
 		CE066E152BAB2B13007C7014 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		CE066E172BAB2B25007C7014 /* VolumeButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeButtonHandler.swift; sourceTree = "<group>"; };
 		CE066E1B2BAB2B7E007C7014 /* Battery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battery.swift; sourceTree = "<group>"; };
-		CE066E1D2BAB2B8B007C7014 /* CpuInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuInformation.swift; sourceTree = "<group>"; };
+		CE066E1D2BAB2B8B007C7014 /* CPUInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUInformation.swift; sourceTree = "<group>"; };
 		CE066E1F2BAB2B98007C7014 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CE066E232BAB2BB6007C7014 /* Device+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Ext.swift"; sourceTree = "<group>"; };
 		CE066E252BAB2BC2007C7014 /* DeviceBasicInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBasicInformation.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				CE066E1B2BAB2B7E007C7014 /* Battery.swift */,
-				CE066E1D2BAB2B8B007C7014 /* CpuInformation.swift */,
+				CE066E1D2BAB2B8B007C7014 /* CPUInformation.swift */,
 				CE066E1F2BAB2B98007C7014 /* Storage.swift */,
 				CE066E232BAB2BB6007C7014 /* Device+Ext.swift */,
 				CE066E252BAB2BC2007C7014 /* DeviceBasicInformation.swift */,
@@ -447,7 +447,7 @@
 				CE8E5E8C2B497FD5007EC804 /* FunctionalityPresenter.swift in Sources */,
 				CE40ADD62B2BE61D00F76E3C /* ConnectivityAssessment.swift in Sources */,
 				CE066E162BAB2B13007C7014 /* SpeechRecognizer.swift in Sources */,
-				CE066E1E2BAB2B8B007C7014 /* CpuInformation.swift in Sources */,
+				CE066E1E2BAB2B8B007C7014 /* CPUInformation.swift in Sources */,
 				CE766A332C8DDA3400B54877 /* DeadpixelFunctionalityPresenter.swift in Sources */,
 				CE066E2A2BAB2BF5007C7014 /* BiometricFailedReason.swift in Sources */,
 				CE766A312C8DD9F600B54877 /* DeadpixelFunctionalityView.swift in Sources */,

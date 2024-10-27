@@ -18,7 +18,7 @@ public class DeviceInfoAssessment: AssessmentDriver {
   public var hasAssessmentPassed: [Assessment: Bool] {
     var results: [Assessment: Bool] = [:]
     
-    if let assessment = assessments[.cpu] as? CpuInformation {
+    if let assessment = assessments[.cpu] as? CPUInformation {
       results[.cpu] = assessment.model?.isEmpty != true
     } else {
       results[.cpu] = false
@@ -40,7 +40,7 @@ public class DeviceInfoAssessment: AssessmentDriver {
   }
   
   public lazy var assessments: [Assessment: Any] = [
-    .cpu: CpuInformation(
+    .cpu: CPUInformation(
       model: Device.current.cpu.description,
       coreCount: processInfo.activeProcessorCount,
       architecture: "arm64",
