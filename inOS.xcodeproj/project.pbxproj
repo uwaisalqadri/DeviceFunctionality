@@ -610,6 +610,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "${PROJECT_NAME}/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = inOS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow access to your Face ID to do biometric assessment";
@@ -655,6 +656,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "${PROJECT_NAME}/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = inOS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow access to your bluetooth to do assessment";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your location to do Camera assessment";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow access to your Face ID to do biometric assessment";
